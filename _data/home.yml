@@ -41,7 +41,7 @@ projects:
     highlight: 
   
   - title: Personal Portfolio Website
-    url:
+    url: https://github.com/sviridovm/sviridovm.github.io
     desc: Created and deployed a personal portfolio website from scratch that uses various web technologies such as Jekyll, JQuery, Bootstrap CSS, and various other libraries
     highlight: NEW
 
