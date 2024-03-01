@@ -1,0 +1,23 @@
+<ul class="card_list">
+    {% for card in include.collection%}
+
+    <li class="card">
+        <a href="{{ card.url }}" class="card_link">
+            <span class="title">
+                {{ card.title }}
+
+                {% if card.highlight %}
+                <mark class="highlight">{{ card.highlight }}</mark>
+                {% endif %}
+
+                <hr>
+            </span>
+
+            <p class="description">
+                {{ card.desc }}
+            </p>
+        </a>
+    </li>
+
+    {% endfor %}
+</ul>

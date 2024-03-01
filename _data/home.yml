@@ -1,0 +1,74 @@
+navbar:
+  - title: About
+    url:
+
+
+  - title: Timeline
+    url:
+
+
+  - title: Projects
+    url:
+
+me:
+  name: Maksim Sviridov
+  quote: Blazingly Fast 🔥 and Bleeding Edge 🩸 Javascript Framework Enjoyer
+  desc: |
+    Roses are red 
+
+    violets are blue
+
+    I test in production
+
+    you should too
+  img: 
+  linkedin:
+  github:
+
+
+text_animation:
+  type_speed: 10  
+  back_delay: 
+  start_delay: 500
+  loop: False
+  loopCount: 1
+  # cursorChar: 
+
+projects:
+  - title: Project 1
+    url:
+    desc: Apple Pie
+    highlight: 
+  
+  - title: Project 2
+    url:
+    desc: banas and stuff
+    highlight: NEW
+
+  - title: Project 3
+    url:
+    desc: tgddjgHKJFGDH
+    highlight: OLD
+  
+  - title: Project 4
+    url: 
+    desc: peepee
+    highlight: 
+
+timeline_events:
+  - event: I went potty
+    date: 2028
+    icon:
+    desc: I went pooppoo in my pants
+
+  - event: graduated colleg
+    date: 2025
+    icon: 
+    desc: I graduated from hustler university
+
+
+footer_links:
+  - title:
+    url:
+
+

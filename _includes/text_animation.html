@@ -1,0 +1,58 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.7/typed.min.js"></script>
+
+{% assign animation = site.data.home.text_animation %}
+
+<script type="text/javascript">
+
+
+
+
+
+    // const typeSpeed = {{ anmation.typeSpeed }};
+
+    $(document).ready(function () {
+        $(window).scrollTop(0);
+
+
+
+        $('.description').typed({
+            strings: [{{ site.data.home.me.desc | newline_to_br | jsonify }}],
+            typeSpeed: {{ animation.type_speed }},
+        backSpeed: 0,
+        loop: false,
+        loopCount: false,
+        showCursor: true,
+        cursorChar: "|",
+        startDelay: {{ animation.start_delay }},
+        callback: function () {
+            console.log("callback")
+            $('.cursor').remove();
+            $('.typed-cursor').text("");
+            // $('description').addClass('animate__animated animate__hinge')
+            // document.querySelector('.description').classList.add('animate__slideOutUp')
+
+            const target = $('#projects');
+            $('html, body').animate({
+                scrollTop: target.offset().top
+            }, 1600);
+        }
+        });
+
+    // const element = document.querySelector('.description');
+    // element.addEventListener('animationend', function () {
+    //     console.log("animation end")
+    //     $('.ty')
+    //     // $('.description').removeClass('animate__animated animate__rotateOut')
+    //     // $('description').text("")
+
+    // });
+
+
+
+        });
+
+
+
+
+</script>

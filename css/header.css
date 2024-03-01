@@ -1,0 +1,67 @@
+.name {
+    padding-top: 1vh;
+    background: linear-gradient(to right, #ff3366, #33ccff);
+    background-clip: text;
+    color: transparent;
+    /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); */
+    /* transition: color 0.3s ease-in-out; */
+
+    /* text-transform: uppercase; */
+    /* text-shadow: 3px 3px 0px #ffcc00; */
+}
+
+.quote {
+    font-size: x-large;
+    /* --animate-delay: 0.5s; */
+}
+
+.content-section {
+    margin-top: 100px;
+    padding-top: 100px;
+}
+
+.social-icons {
+    margin: 5px;
+    font-size: 2em;
+}
+
+.about {
+    font-size: large;
+    /* margin: ; */
+
+}
+
+.description {
+    font-size: large;
+    color: #f8f8f8;
+}
+
+#projects {
+    margin-top: 200px;
+    padding-top: 200px;
+    margin-bottom: 200px;
+    padding-bottom: 200px;
+}
+
+.profile-pic {
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    object-fit: cover;
+}
+
+
+.rubik-font {
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    /* background-color: ; */
+    background: linear-gradient(180deg, #333, #444, #333);
+    background: linear-gradient(45deg, #333, #444, #333);
+    color: #fff;
+    /* Set text color to white for readability */
+}

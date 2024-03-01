@@ -1,0 +1,21 @@
+<section class="container content-section text-center" id="projects">
+    <a href="{{ site.baseurl }}/#projects" class="text-decoration-none">
+        <h1 class="name animate__animated animate__fadeInRight animate_faster" style="font-size: 8rem;">Projects</h1>
+        <!-- <h2>Projects</h2> -->
+    </a>
+    <div class="row row-cols-3">
+        {% for card in include.collection %}
+        <div class="col-4 g-1">
+            <div class="card h-100">
+                <!-- <img src="..." class="card-img-top" alt="..."> -->
+                <a href="{{ card.url }}" class="text-decoration-none">
+                    <div class="card-body">
+                        <h5 class="card-title text-primary">{{ card.title }}</h5>
+                        <p class="card-text text-body">{{ card.desc }}</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>

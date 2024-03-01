@@ -1,0 +1,33 @@
+{% assign data = site.data.home.me %}
+<!-- <header class="header"> -->
+<section class="container text-center content-section">
+    <h1 class="name animate__animated animate__fadeInRight animate_faster" style="font-size: 8rem;">{{ data.name }}
+    </h1>
+
+    <div class="text-left">
+        <div class="quote animate__animated animate__lightSpeedInLeft animate__slow text-white">{{ data.quote }}
+        </div>
+
+        <div class="social-icons">
+            <a href="{{ data.github }}" class="social-icon" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="{{ data.linkedin }}" class="social-icon" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <!-- <a href="{{ data.twitter }}" class="social-icon" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="{{ data.instagram }}" class="social-icon" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-instagram"></i>
+            </a> -->
+        </div>
+        <div class="col-md-12 ">
+            <span class="description animate__animated"></span>
+            <!-- <span class="cursor">|</span> -->
+            <!-- <img src="{{ data.img }}" alt="profile" class=""> -->
+        </div>
+    </div>
+
+</section>
+<!-- </header> -->
