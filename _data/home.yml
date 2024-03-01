@@ -11,7 +11,7 @@ navbar:
     url:
 
 me:
-  name: Maksim Sviridov
+  name: Maks Sviridov
   quote: Blazingly Fast 🔥 and Bleeding Edge 🩸 Javascript Framework Enjoyer
   desc: |
     Roses are red 
@@ -22,27 +22,27 @@ me:
 
     you should too
   img: 
-  linkedin:
-  github:
+  linkedin: https://www.linkedin.com/in/maksim-sviridov-921321263/
+  github: https://github.com/sviridovm
 
 
 text_animation:
   type_speed: 10  
   back_delay: 
-  start_delay: 500
+  start_delay: 1000
   loop: False
   loopCount: 1
   # cursorChar: 
 
 projects:
-  - title: Project 1
+  - title: C++ Thread Library
     url:
-    desc: Apple Pie
+    desc: Implemented a virutal C++ Thread Library that includes mutexes, cvs, and support for multiple simultaenous CPU cores
     highlight: 
   
-  - title: Project 2
+  - title: Personal Portfolio Website
     url:
-    desc: banas and stuff
+    desc: Created and deployed a personal portfolio website from scratch that uses various web technologies such as Jekyll, JQuery, Bootstrap CSS, and various other libraries
     highlight: NEW
 
   - title: Project 3
