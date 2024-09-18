@@ -1,26 +1,22 @@
 navbar:
-  - title: About
-    url:
-
-
-  - title: Timeline
-    url:
-
+  - title: Google it
+    url: "/googleit/"
 
   - title: Projects
-    url:
+    url: /#projects
 
 me:
   name: Maks Sviridov
   quote: Blazingly Fast 🔥 and Bleeding Edge 🩸 Javascript Framework Enjoyer
-  desc: |
-    Roses are red 
+  desc: 
+  # desc: |
+  #   Roses are red 
 
-    violets are blue
+  #   violets are blue
 
-    I test in production
+  #   I test in production
 
-    you should too
+  #   you should too
   img: 
   linkedin: https://www.linkedin.com/in/maksim-sviridov-921321263/
   github: https://github.com/sviridovm

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    {% include head.html %}
+</head>
+
+<body>
+    <div class="container">
+        <div class="text-center mb-4">
+            <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"
+                alt="Google Logo" width="200">
+        </div>
+
+        <div class="text-center">
+            <input id="searchQuery" type="text" class="form-control search-bar" placeholder="">
+            <button id="searchButton" class="btn btn-primary mt-2">Search</button>
+        </div>
+
+    </div>
+
+
+    <script>
+        $(document).ready(function () {
+            $('#searchQuery').focus();
+            $('#searchQuery').text('');
+
+            // get search query from the url
+            const urlParams = new URLSearchParams(window.location.search);
+            const query = urlParams.get('q');
+            // $('#searchQuery').val((decodeURI(query) || ''));
+            console.log(query);
+
+            $('#searchQuery').typed({
+                strings: [query],
+                typeSpeed: 3,
+                backSpeed: 0,
+                loop: false,
+                loopCount: false,
+                showCursor: true,
+                cursorChar: "|",
+                startDelay: 1300,
+                callback: function () {
+                    console.log("callback")
+                    $('#searchButton').click(function () {
+                        console.log("search button clicked")
+                        const searchQuery = $('#searchQuery').val();
+                        console.log(searchQuery);
+
+                        const encodedParams = encodeURI(searchQuery);
+                        const searchUrl = `https://www.google.com/search?q=${searchQuery}`;
+                        console.log(searchUrl);
+
+                        // redirect to search url
+                        window.location.href = searchUrl;
+
+                        // $('#searchResults').html(`<a href="${searchUrl}" target="_blank">${searchUrl}</a>`);
+                        // window.location.href = searchUrl;
+                    })
+
+                    // play cursor animation moving to search buttoon and clicking
+                    // TODO: add animation
+
+                    const delay = 1000;
+
+                    setTimeout(() => {
+                        // $('#searchButton').addClass('animate__animated animate__bounceIn');
+                        $('#searchButton').click();
+                    }, delay);
+
+
+                    // $('.cursor').remove();
+                    // $('.typed-cursor').text("");
+                    // $('description').addClass('animate__animated animate__hinge')
+                    // document.querySelector('.description').classList.add('animate__slideOutUp')
+
+                    // const target = $('#projects');
+                    // $('html, body').animate({
+                    // scrollTop: target.offset().top
+                    // }, 1600);
+                }
+            });
+
+
+        });
+
+    </script>
+
+
+</body>
+
+</html>

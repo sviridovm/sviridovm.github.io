@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% include head.html %}
+
+    <link rel="stylesheet" href="/css/googleit.css">
+</head>
+
+<body>
+    {% include navbar.html %}
+
+
+    <div class="container my-5">
+        <div class="text-center mb-4">
+            <h1 id="search-link-generator">Google Search Link Generator</h1>
+            <p id="slogan">For when your aggression isn't passive enough</p>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-md-6 col-lg-4">
+                <div class="mb-3">
+                    <input id="searchQuery" type="text" class="form-control"
+                        placeholder="Something that could have been googled...">
+                </div>
+                <div class="mb-3">
+                    <button id="generateLink" class="btn btn-primary w-100">Generate Link</button>
+                </div>
+                <div id="linkContainer" class="text-center">
+                    <button id="copyLink" class="btn btn-secondary w-100" hidden>Copy Link</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        $(document).ready(function () {
+            $('#generateLink').click(function () {
+                const searchQuery = $('#searchQuery').val();
+                if (searchQuery) {
+                    const link = `{{ site.url }}/search?q=${encodeURIComponent(searchQuery)}`;
+                    // $('#linkContainer').html(`<a href="${link}" target="_blank" class="btn btn-link">${link}</a>`);
+                    $('#copyLink').attr('hidden', false);
+                    // store the link so that the copy link button can access it
+                    window.link = link;
+                } else {
+                    alert('Please enter a search query.');
+                }
+            });
+
+            $('#copyLink').click(function () {
+                navigator.clipboard.writeText(window.link).then(() => {
+                    alert('Link copied to clipboard!');
+                }, () => {
+                    alert('Failed to copy the link.');
+                });
+            });
+        });
+    </script>
+
+    {% include footer.html %}
+</body>
+
+</html>

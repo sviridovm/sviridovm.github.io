@@ -1,0 +1,18 @@
+body {
+    /* background-color: ; */
+    background: linear-gradient(90deg, #363434, #444, #3b3939);
+    /* background: linear-gradient(45deg, #333, #444, #333); */
+    color: #fff;
+    /* Set text color to white for readability */
+
+
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+}
+
+nav {
+    background: linear-gradient(90deg, #363434, #444, #3b3939);
+    padding-bottom: 42px;
+}
