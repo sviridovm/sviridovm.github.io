@@ -14,17 +14,29 @@
     $(document).ready(function () {
         $(window).scrollTop(0);
 
+        let showDescription = "{{ site.data.home.me.show_description }}";
 
+        // fuck javascript formatter
+        if (showDescription == "False") {
 
-        $('.description').typed({
-            strings: [{{ site.data.home.me.desc | newline_to_br | jsonify }}],
-            typeSpeed: {{ animation.type_speed }},
+            // move to target after 1.5 sec
+            const setTimeout(() => {
+                const target = $('#projects');
+                $('html, body').animate({
+                    scrollTop: target.offset().top
+                }, 1600);
+            }, 1500);
+        } else {
+
+            $('.description').typed({
+                strings: [{{ site.data.home.me.desc | newline_to_br | jsonify }}],
+                typeSpeed: {{ animation.type_speed }},
         backSpeed: 0,
-        loop: false,
-        loopCount: false,
-        showCursor: true,
-        cursorChar: "|",
-        startDelay: {{ animation.start_delay }},
+            loop: false,
+                loopCount: false,
+                    showCursor: true,
+                        cursorChar: "|",
+                            startDelay: { { animation.start_delay } },
         callback: function () {
             console.log("callback")
             $('.cursor').remove();
@@ -37,7 +49,8 @@
                 scrollTop: target.offset().top
             }, 1600);
         }
-        });
+    });
+    }
 
     // const element = document.querySelector('.description');
     // element.addEventListener('animationend', function () {
