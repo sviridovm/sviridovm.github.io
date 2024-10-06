@@ -33,7 +33,7 @@ text_animation:
 
 projects:
   - title: C++ Thread Library
-    url:
+    url: /#projects
     desc: Implemented a virutal C++ Thread Library that includes mutexes, cvs, and support for multiple CPU core systems
     tags:
       - name: 
@@ -41,21 +41,23 @@ projects:
   - title: Personal Portfolio Website
     url: https://github.com/sviridovm/sviridovm.github.io
     desc: Created and deployed a personal portfolio website from scratch that uses various web technologies such as Jekyll, JQuery, Bootstrap CSS, and various other libraries
-    highlight: NEW
+    tags:
+      - name: Click for Code!
+        type: success
 
   - title: MapReduce Framework
-    url:
+    url: /#projects
     desc: Implemented a simplified MapReduce framework in Python
     highlight: OLD
 
   - title: Wikipedia Search Engine
-    url:
-    desc: Designed and developed a distributed search engine utilizing MapReduce and Service-Oriented Architecture. This project involved creating a segmented inverted index of web pages, building an Index server with a REST API, and developing a Search server with a user-friendly interface.
+    url: /#projects
+    desc: Designed and developed a distributed search engine utilizing MapReduce and Service-Oriented Architecture. Created a segmented inverted index of web pages, building an Index server with a REST API, and developing a Search server with a user-friendly interface.
     highlight: 
 
   - title: Labor Market Economy Simulator
     url: https://github.com/sviridovm/LaborMarketSimulation
-    desc: Implemented a labor market simulation in python
+    desc: Designed and implemented a labor market simulation in python. Developed a TKinter UI for simple data visualization
     tags:
       - name: Work in Progress!
         type: warning
