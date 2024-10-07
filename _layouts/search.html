@@ -8,6 +8,8 @@
 
 
     {% include head.html %}
+
+    <link rel="stylesheet" href="/css/search.css">
 </head>
 
 <body>
@@ -16,6 +18,9 @@
             <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"
                 alt="Google Logo" width="200">
         </div>
+
+        <p class="fun-banter mt-3">Maks is busy right now, but since he's so kind, he'll still help you out.</p>
+
 
         <div class="text-center">
             <input id="searchQuery" type="text" class="form-control search-bar" placeholder="">
@@ -66,7 +71,7 @@
                     // play cursor animation moving to search buttoon and clicking
                     // TODO: add animation
 
-                    const delay = 1000;
+                    const delay = 2000;
 
                     setTimeout(() => {
                         // $('#searchButton').addClass('animate__animated animate__bounceIn');
