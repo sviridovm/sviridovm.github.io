@@ -37,7 +37,9 @@
 
             // get search query from the url
             const urlParams = new URLSearchParams(window.location.search);
-            const query = urlParams.get('q');
+            const encodedQuery = urlParams.get('q');
+            const query = decodeURIComponent(escape(atob(encodedQuery)));
+
             // $('#searchQuery').val((decodeURI(query) || ''));
             console.log(query);
 
@@ -54,8 +56,19 @@
                     console.log("callback")
                     $('#searchButton').click(function () {
                         console.log("search button clicked")
-                        const searchQuery = $('#searchQuery').val();
-                        console.log(searchQuery);
+                        // const encodedQuery = $('#searchQuery').val();
+                        // console.log(encodedQuery);
+
+                        // console.log(atob(encodedQuery));
+                        // const searchQuery = decodeURIComponent(escape(atob(encodedQuery)));
+
+                        // console.log(searchQuery);
+
+                        // console.log('bruh')
+                        // console.log(btoa('apple'));
+                        // console.log(atob(btoa('apple')));
+
+                        const searchQuery = query;
 
                         const encodedParams = encodeURI(searchQuery);
                         const searchUrl = `https://www.google.com/search?q=${searchQuery}`;

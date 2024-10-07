@@ -26,9 +26,9 @@
                     <input id="searchQuery" type="text" class="form-control"
                         placeholder="Something that could have been googled...">
                 </div>
-                <div class="mb-3">
+                <!-- <div class="mb-3">
                     <button id="generateLink" class="btn btn-primary w-100">Generate Link</button>
-                </div>
+                </div> -->
                 <div id="linkContainer" class="text-center">
                     <button id="copyLink" class="btn btn-secondary w-100" hidden>Copy Link</button>
                 </div>
@@ -39,21 +39,38 @@
 
     <script>
         $(document).ready(function () {
-            $('#generateLink').click(function () {
-                const searchQuery = $('#searchQuery').val();
-                if (searchQuery) {
-                    const link = `{{ site.url }}/search?q=${encodeURIComponent(searchQuery)}`;
-                    // $('#linkContainer').html(`<a href="${link}" target="_blank" class="btn btn-link">${link}</a>`);
-                    $('#copyLink').attr('hidden', false);
-                    // store the link so that the copy link button can access it
-                    window.link = link;
+            // $('#generateLink').click(function () {
+
+            // });
+
+            $('#searchQuery').focus();
+            // if search query is empty, hide the copy link button
+
+            $('#searchQuery').on('input', function () {
+                if ($('#searchQuery').val().trim() === '') {
+                    $('#copyLink').attr('hidden', true);  // Hide the button if input is empty
                 } else {
-                    alert('Please enter a search query.');
+                    $('#copyLink').attr('hidden', false);  // Show the button if there is input
                 }
             });
 
             $('#copyLink').click(function () {
-                navigator.clipboard.writeText(window.link).then(() => {
+                const searchQuery = $('#searchQuery').val();
+                // if (searchQuery) {
+                //     // $('#linkContainer').html(`<a href="${link}" target="_blank" class="btn btn-link">${link}</a>`);
+                //     $('#copyLink').attr('hidden', false);
+                //     // store the link so that the copy link button can access it
+                //     window.link = link;
+                // } else {
+                //     alert('Please enter a search query.');
+                // }
+
+                const encodedQuery = btoa(unescape(encodeURIComponent(searchQuery)));
+                const link = `{{ site.url }}/search?q=${encodedQuery}`;
+                // const link = `{{ site.url }}/search?q=${base64Encode(searchQuery)}`;
+
+
+                navigator.clipboard.writeText(link).then(() => {
                     alert('Link copied to clipboard!');
                 }, () => {
                     alert('Failed to copy the link.');
