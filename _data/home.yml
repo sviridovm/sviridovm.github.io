@@ -64,6 +64,16 @@ projects:
 
       - name: Click for Code!
         type: success
+  
+  - title: Medication Tracking Mobile Application
+    url: https://github.com/sviridovm/doserra
+    desc: Mobile Application featuring accessible design features. Developed using ReactNative, Expo, and SQLite.
+    tags:
+      - name: Work in Progress!
+        type: warning
+      
+      - name: Click for Code!
+        type: success
       
   
   
