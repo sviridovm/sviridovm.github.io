@@ -10,9 +10,130 @@ body {
     font-optical-sizing: auto;
     font-weight: normal;
     font-style: normal;
+
 }
 
-nav {
-    background: linear-gradient(90deg, #363434, #444, #3b3939);
-    padding-bottom: 42px;
+
+/* hide scrollbar */
+html { scrollbar-width: none; } /* Firefox */
+body { -ms-overflow-style: none; } /* IE and Edge */
+body::-webkit-scrollbar, body::-webkit-scrollbar-button
+
+.about-text {
+    margin: auto;
 }
+
+.about-img {
+    display: grid;
+    place-items: center;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: auto;
+
+}
+
+.about-img::before {
+    width: 305px; /* Slightly larger than the parent */
+    height: 305px;
+    /* background: linear-gradient(45deg, #ff3366, #33ccff, #ff3366, #33ccff); Multiple colors for a smoother gradient animation */
+    animation: rotate 2s linear infinite;
+    background : conic-gradient(in hsl, #ff3366, #33ccff, #ff3366);
+
+    transition: all 0.6s ease; /* Smooth transition when hovering */
+}
+
+
+@keyframes rotate {
+    from{
+        -webkit-transform: rotate(0deg);
+    }
+    to{
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+
+
+.about-img::before {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    transition: all 0.5s;
+}
+
+.about-img pre {
+    color: black;
+    background-color: white;
+    font-size: 4px;
+    line-height: 1;
+    text-align: center;
+    position: relative; 
+    transform: translate(-35%, -30%); /* Center the artwork */
+    left: 50%;
+    top: 50%;
+    text-align: center;
+
+    transition: transform 0.6s ease-in-out;
+    transform-style: preserve-3d;
+
+}
+
+
+
+
+.about-img pre:hover {
+    /* transform: translate(-35%, -30%) rotateX(180deg) rotateY(180deg); */
+    /* transform: translate(-35%, -30%) rotate(360deg); */
+    animation: matrix-effect 1200ms linear infinite;
+}
+
+.navbar {
+    background-color: transparent !important;   
+    box-shadow: none;
+}
+
+.cell {
+    display: grid;
+    height: 100%;
+}
+
+.card {
+    /* transition: border 0.15s ease-in-out; */
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.75s ease-in-out;
+    
+}
+
+.card.visible {
+    opacity: 1;
+    transform: translateY(0);
+    perspective: 1000px;
+}
+
+.card:hover {
+    outline: 6px solid transparent;
+    /* outline-color: rgba(255,51,102, 0.5); */
+    /* border: 4px dashed #ff3366;  */
+    /* You can change the color to whatever you like */
+    /* box-shadow: none; */
+}
+
+.card-footer-item {
+    background-color: #CCC;
+    border-radius: 50px;
+}
+
+/* .navbar-item:hover {
+    background-color: rgba(255,51,102, 0.5); 
+    color: #AAA;
+  } */
+
+/* .navbar-item {
+    border-radius: 20px;
+} */
+

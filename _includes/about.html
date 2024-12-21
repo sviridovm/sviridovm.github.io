@@ -1,0 +1,73 @@
+{% assign me = site.data.home.me %}
+
+<script>
+    $(document).ready(function () {
+        const filePath = "{{site.data.home.me.ascii_file}}";
+        const pre = $(".about-pre");
+
+        $.get(filePath, function(data){
+            // console.log(data);
+            // const lines = data.split("\n");
+            // const typed = pre.typed({ 
+            //     strings: [data],
+            //     typeSpeed: 0,
+            //     backSpeed: 0,
+            //     showCursor: true,
+            //     cursorChar: "|",
+            // });  
+            pre.text(data); 
+        });
+
+
+        function checkVisibility() {
+            const cardTop = pre.offset().top;
+            const offset = $(window).height() * 0.90;
+            const scrollBottom = $(window).scrollTop() + offset;
+    
+            if(scrollBottom > cardTop){
+                $.get(filePath, function(data){
+                    const lines = data.split("\n");
+                    const typed = new Typed('.about-pre', {
+                        strings: [data],
+                        typeSpeed: 40,
+                        backSpeed: 0,
+                        showCursor: true,
+                        cursorChar: "|",
+                    });  
+                });
+            }
+        }
+    
+    // Run on page load and scroll
+    // checkVisibility();
+    // $(window).on("scroll", checkVisibility);
+});
+
+</script>
+
+
+<section class="container content-section" id="about">
+    <h1 class="name animate__animated animate__fadeInRight animate_faster">About Me</h1>
+    
+    <div class="container">
+        <div class="columns">
+            <div class="about-text column is-three-fifths">
+                <p class="description">
+                    {{ me.about }}
+                </p>
+            </div>
+
+            <div class="column is-two-fifths">
+                <div class="about-img">
+                    <pre class="about-pre">             
+                    </pre>
+                </div>
+                
+        </div>
+
+    </div>
+        
+</section>
+
+
+

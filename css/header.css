@@ -1,15 +1,45 @@
 .name {
-    /* padding-top: 0.6vh; */
     background: linear-gradient(to right, #ff3366, #33ccff);
     background-clip: text;
-    color: transparent;
-    /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); */
-    /* transition: color 0.3s ease-in-out; */
-    /* font-size: 8vw; */
+    /* color: transparent; */
     font-size: max(3rem, 7vw);
-    /* text-transform: uppercase; */
-    /* text-shadow: 3px 3px 0px #ffcc00; */
+    /* display: inline-block; */
+
+    /* background: linear-gradient(to right, #ff7e5f, #feb47b); */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer; /* Adds pointer to indicate interactable text */
+    transition: all 0.3s ease-in-out;
+    margin-bottom: 10px;
+
 }
+
+.name:hover {
+    /* text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5); */
+    /* background: linear-gradient(to left, #ff3366, #33ccff); */
+    background-clip: text;
+    /* display: inline-block; */
+
+
+}
+
+.name::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px; /* Distance below text */
+    width: 0; /* Start hidden */
+    height: 2px; /* Line thickness */
+    /* background: linear-gradient(to right, #ff7e5f, #feb47b); */
+    background: linear-gradient(to left, #ff3366, #33ccff);
+    transition: width 0.7s ease-out; /* Smooth underline scaling */
+    margin-bottom: 5px;
+}
+  
+  .name:hover::after {
+    width: 100%; /* Expand underline */
+  }
+
 
 .quote {
     /* font-size: x-large; */
@@ -17,10 +47,7 @@
     /* --animate-delay: 0.5s; */
 }
 
-.content-section {
-    margin-top: 100px;
-    /* padding-top: 100px; */
-}
+
 
 .social-icons {
     margin: 5px;
@@ -38,21 +65,22 @@
     color: #f8f8f8;
 }
 
-.card {
-    transition: border 0.15s ease-in-out;
+.top-section {
+    /* margin-top: 200px; */
+    /* padding-top: 200px; */
+    height: 100vh;
+    align-content: center;
+    /* margin-bottom: 400px; */
+    /* padding-bottom: 400px; */
+
 }
 
-.card:hover {
-    border: 4px solid #337ab7;
-    /* You can change the color to whatever you like */
-    box-shadow: none;
-}
-
-#projects {
-    margin-top: 200px;
-    padding-top: 200px;
-    margin-bottom: 100px;
-    padding-bottom: 100px;
+.content-section {
+    margin-top: 50px;
+    padding-top: 50px;
+    /* margin-bottom: 300px; */
+    /* padding-bottom: 300px; */
+    height: 100vh;
 }
 
 .profile-pic {

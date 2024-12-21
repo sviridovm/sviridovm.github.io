@@ -12,7 +12,7 @@
     // const typeSpeed = {{ anmation.typeSpeed }};
 
     $(document).ready(function () {
-        $(window).scrollTop(0);
+        // $(window).scrollTop(0);
 
         let showDescription = "{{ site.data.home.me.show_description }}";
 
@@ -20,36 +20,52 @@
         if (showDescription == "False") {
 
             // move to target after 1.5 sec
-            const setTimeout(() => {
-                const target = $('#projects');
-                $('html, body').animate({
-                    scrollTop: target.offset().top
-                }, 1600);
-            }, 1500);
+            // const setTimeout(() => {
+            //     const target = $('#projects');
+            //     $('html, body').animate({
+            //         scrollTop: target.offset().top
+            //     }, 1600);
+            // }, 1500);
         } else {
 
-            $('.description').typed({
-                strings: [{{ site.data.home.me.desc | newline_to_br | jsonify }}],
-                typeSpeed: {{ animation.type_speed }},
-        backSpeed: 0,
-            loop: false,
-                loopCount: false,
-                    showCursor: true,
-                        cursorChar: "|",
-                            startDelay: { { animation.start_delay } },
-        callback: function () {
-            console.log("callback")
-            $('.cursor').remove();
-            $('.typed-cursor').text("");
-            // $('description').addClass('animate__animated animate__hinge')
-            // document.querySelector('.description').classList.add('animate__slideOutUp')
+            const filePath = "{{site.data.home.me.ascii_file}}";
+            
+            $.get(filePath, function(data){
+                const lines = data.split("\n");
+                $('.about-pre').typed({
+                    strings: lines,
+                    typeSpeed: 1000,
+                    loop: false,
+                    loopCount: false,
+                    showCur
+                })
 
-            const target = $('#projects');
-            $('html, body').animate({
-                scrollTop: target.offset().top
-            }, 1600);
-        }
-    });
+            });  
+
+
+
+        //     $('.description').typed({
+        //         strings: [{{ site.data.home.me.desc | newline_to_br | jsonify }}],
+        //         typeSpeed: {{ animation.type_speed }},
+        // backSpeed: 0,
+        //     loop: false,
+        //         loopCount: false,
+        //             showCursor: true,
+        //                 cursorChar: "|",
+        //                     startDelay: { { animation.start_delay } },
+        // callback: function () {
+        //     console.log("callback")
+        //     $('.cursor').remove();
+        //     $('.typed-cursor').text("");
+        //     // $('description').addClass('animate__animated animate__hinge')
+        //     // document.querySelector('.description').classList.add('animate__slideOutUp')
+
+        //     const target = $('#projects');
+        //     $('html, body').animate({
+        //         scrollTop: target.offset().top
+        //     }, 1600);
+        // }
+        // });
     }
 
     // const element = document.querySelector('.description');

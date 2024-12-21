@@ -10,7 +10,7 @@
     {% include head.html %}
 </head>
 
-<body id="body" class="rubik-font" style="overflow-x: hidden;">
+<body id="body has-navbar-fixed-top" class="rubik-font" style="overflow-x: hidden;">
 
     <!-- navbar -->
     {% include navbar.html %}
@@ -19,11 +19,16 @@
     {% include header.html %}
     <!-- End Header -->
 
+    {% include about.html %}
+
+    {% include class-list.html %}
+
     <!-- Cards -->
-    {% include card-list.html collection=site.data.home.projects %}
+    {% include cards.html collection=site.data.home.projects %}
 
-
+    
     <!-- Timeline -->
+    {% include skills.html %}
 
 
     <!-- Footer -->

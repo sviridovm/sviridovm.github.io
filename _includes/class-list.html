@@ -1,0 +1,47 @@
+{% assign classes = site.data.home.classes %}
+
+<script>
+    $(document).ready(function () {
+  function checkVisibility() {
+    $(".animate-on-scroll").each(function () {
+      const cardTop = $(this).offset().top;
+      const offsetBottom = $(window).height() * 0.95;
+      const scrollBottom = $(window).scrollTop() + offsetBottom;
+    const offsetTop = $(window).height() * .15;
+    const topView = $(window).scrollTop() - offsetTop;
+
+      if (scrollBottom > cardTop && cardTop > topView) {
+        $(this).addClass("visible");
+      } else {
+        $(this).removeClass("visible");
+      }
+    });
+  }
+
+  // Run on page load and scroll
+  checkVisibility();
+  $(window).on("scroll", checkVisibility);
+});
+</script>
+
+<section class="container content-section" id="classes">
+    <!-- <a href="{{ site.url }}/#Classes" class="text-decoration-none"> -->
+        <h1 class="name animate__animated animate__fadeInRight animate_faster">Classes</h1>
+    <!-- </a> -->
+
+        <div class="columns is-multiline is-1">
+            {% for class in classes %}
+            <div class="column is-3">
+                <div class="card animate-on-scroll">
+                    <div class="card-content">
+                        <div class="content">
+                            {{ class.name }}
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            
+            {% endfor %}
+        </div>
+</section>

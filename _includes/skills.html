@@ -1,0 +1,23 @@
+{% assign skills = site.data.home.skills %}
+
+<section class="container content-section" id="skills">
+    <!-- <a href="{{ site.url }}/#Classes" class="text-decoration-none"> -->
+        <h1 class="name animate__animated animate__fadeInRight animate_faster">Technologies</h1>
+    <!-- </a> -->
+
+        <div class="columns is-multiline is-1">
+            {% for skill in skills %}
+            <div class="column is-3">
+                <div class="card animate-on-scroll">
+                    <div class="card-content">
+                        <div class="content">
+                            {{ skill.name }}
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            
+            {% endfor %}
+        </div>
+</section>

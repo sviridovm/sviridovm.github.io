@@ -1,7 +1,7 @@
 <!-- create a horizontal list of all my links in the top left of the screen -->
 
 
-<nav class="navbar navbar-expand-lg fixed-top ">
+<!-- <nav class="navbar navbar-expand-lg fixed-top ">
     <div class="container-fluid">
         <ul class="nav">
             <li class="nav-item">
@@ -16,4 +16,25 @@
     </div>
 
 
-</nav>
+</nav> -->  
+
+
+<nav class="navbar is-transparent is-fixed-top" role="navigation" aria-label="main navigation">
+    
+  
+    <div id="" class="navbar-menu">
+      <div class="navbar-start">
+<!-- 
+          <a class="navbar-item" href="{{ site.url }}">
+            Home
+          </a> -->
+        {% for item in site.data.home.navbar %}
+            <a class="navbar-item" href="{{ site.url }}{{ item.url }}">{{item.title}}</a>
+        {% endfor %}
+        
+        </div>
+      </div>
+  
+      
+    </div>
+  </nav>
