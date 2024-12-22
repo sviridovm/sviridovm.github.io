@@ -18,21 +18,35 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Your awesome title
+title: Maksim Sviridov Personal Portfolio Website
 email: sviridov@umich.edu
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+    Personal Portfolio website for Maksim Sviridov or Maks Sviridov. Website includes
+    about page, classes taken, personal projects, and familiar technologies.
+  
+# Write an awesome description for your new site here. You can edit this
+# line in _config.yml. It will appear in your document head meta (for
+# Google search results) and in your feed.xml site description.
 baseurl: "/" # the subpath of your site, e.g. /blog
 url: "https://sviridovm.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+github_username:  sviridovm
+
+
+# For SEO Tag
+social: 
+  name: Maks Sviridov
+  links: 
+    - https://github.com/sviridovm
+    - https://www.linkedin.com/in/maksim-sviridov-921321263/
+
 
 # Build settings
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
 
 # Exclude from processing.
 # The following items will not be processed, by default.

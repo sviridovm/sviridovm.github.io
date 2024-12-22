@@ -1,0 +1,14 @@
+{% assign sections = site.data.home.navbar %}
+
+
+
+
+<div class="dots">
+    {% for item in sections %}
+
+    {% if forloop.last %}
+    {% else %}
+    <a class="dot" href="{{ site.url }}{{ item.url }}"></a>
+    {% endif %}
+    {% endfor %}
+</div>

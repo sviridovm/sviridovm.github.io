@@ -2,6 +2,9 @@
 
 <script>
     $(document).ready(function () {
+        $(`.dot:eq(${0})`).addClass("active");
+
+
   function checkVisibility() {
     $(".animate-on-scroll").each(function () {
       const cardTop = $(this).offset().top;
@@ -22,6 +25,21 @@
   checkVisibility();
   $(window).on("scroll", checkVisibility);
 });
+
+$(window).on("scroll", function () {
+    const sections = $("section");
+    let currentSection = 0;
+
+    sections.each(function (index) {
+        const sectionTop = $(this).offset().top;
+        if ($(window).scrollTop() >= sectionTop - $(window).height() / 2) {
+            currentSection = index;
+        }
+    });
+
+    $(".dot").removeClass("active");
+    $(`.dot:eq(${currentSection})`).addClass("active");
+}); 
 </script>
 
 <section class="container content-section" id="classes">

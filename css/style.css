@@ -101,32 +101,46 @@ body::-webkit-scrollbar, body::-webkit-scrollbar-button
     height: 100%;
 }
 
+
 .card {
     /* transition: border 0.15s ease-in-out; */
     opacity: 0;
     transform: translateY(20px);
     transition: all 0.75s ease-in-out;
+    /* background-color: #363434; */
+    /* background: #363434; */
+
     
 }
 
 .card.visible {
+
     opacity: 1;
     transform: translateY(0);
-    perspective: 1000px;
+    z-index: 1;
+    background: #363434;
+    
+
+    position: relative;
+    box-sizing: border-box;
+
+
+    
 }
 
 .card:hover {
     outline: 6px solid transparent;
+
+    /* outline-color: rgba(255, 255, 255, 0.5); */
+
+    /* animate opacity from 0.5 to 1 */
+    
+
     /* outline-color: rgba(255,51,102, 0.5); */
-    /* border: 4px dashed #ff3366;  */
-    /* You can change the color to whatever you like */
-    /* box-shadow: none; */
 }
 
-.card-footer-item {
-    background-color: #CCC;
-    border-radius: 50px;
-}
+
+
 
 /* .navbar-item:hover {
     background-color: rgba(255,51,102, 0.5); 
@@ -137,3 +151,46 @@ body::-webkit-scrollbar, body::-webkit-scrollbar-button
     border-radius: 20px;
 } */
 
+.dots {
+    position: fixed;
+    right: 30px;
+    top: 50%;
+    /* transform: translateY(-50%); */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    z-index: 3;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    background-color: #ddd;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: opacity 0.3s;
+    opacity: 0.5;
+
+}
+
+.dot.active {
+    /* background: linear-gradient(45deg, #ff3366, #33ccff); */
+    opacity: 1;
+
+}
+
+
+.github-icon {
+    color: whitesmoke;
+    align-self: center;
+    font-size: 30px;
+    transition: all 0.3s;
+}
+
+.github-icon:hover {
+    /* color: #2dba4e; */
+    /* color: #33ccff */
+    color: #ff3366;
+    font-size: 35px;
+}

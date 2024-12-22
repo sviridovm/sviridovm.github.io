@@ -33,8 +33,9 @@ me:
   img: 
   linkedin: https://www.linkedin.com/in/maksim-sviridov-921321263/
   github: https://github.com/sviridovm
-  about: Hi👋! My name is Maks and I am a computer science student at the University of Michigan 〽️. 
-          This site showcases my projects, ideas, and insights across a range of interests, from distributed systems and simulations to dynamic web apps and algorithmic designs.
+  about: Hi👋! My name is Maks, and I am a computer science student at the University of Michigan 〽️. 
+          This site showcases my projects, ideas, and insights across a range of interests, from distributed systems and simulations to dynamic web apps and algorithmic designs. 
+          In my free time, I love hanging out with my 4 cats 😺 and watching sports 🏈🏀🏒
   ascii_file: assets/ascii/pic.txt
 
 text_animation:
@@ -47,31 +48,31 @@ text_animation:
 
 projects:
   - title: C++ Thread Library
-    url: /#projects
-    desc: Implemented a virutal C++ Thread Library that includes mutexes, cvs, and support for multiple CPU core systems
+    url: 
+    desc: Implemented a virtual C++ Thread Library that includes mutexes, cvs, and support for multiple CPU core systems
     tags:
       - name: 
 
   - title: Personal Portfolio Website
     url: https://github.com/sviridovm/sviridovm.github.io
-    desc: Created a personal portfolio website from scratch using various web technologies such as Jekyll, JQuery, Bootstrap CSS, and various other libraries
+    desc: Personal portfolio website built with Jekyll, JQuery, Bulma CSS, and various other libraries. Deployed on Github Pages
     tags:
       - name: Click for Code!
         type: success
 
-  - title: MapReduce Framework
-    url: 
-    desc: Implemented a simplified MapReduce framework in Python
+  - title: MaksDB
+    url: https://github.com/sviridovm/MaksDB
+    desc: An In-Memory Sharded Vector DB implemented with the FAISS library. Written in Python 
     highlight: OLD
 
   - title: Wikipedia Search Engine
     url: 
-    desc: Designed and developed a distributed search engine utilizing MapReduce and Service-Oriented Architecture. Created a segmented inverted index of web pages, building an Index server with a REST API, and developing a Search server with a user-friendly interface.
+    desc: Distributed search engine utilizing MapReduce for indexing and Service-Oriented Architecture. Created a segmented inverted index of web pages, building an Index server with a REST API, and developing a Search server with a user-friendly interface.
     highlight: 
 
   - title: Labor Market Economy Simulator
     url: https://github.com/sviridovm/LaborMarketSimulation
-    desc: Designed and implemented a labor market simulation in python. Developed a TKinter UI for simple data visualization
+    desc: Labor market simulation built in python using Agent Based Modeling. Includes a TKinter UI for elementary data visualization
     tags:
       - name: Work in Progress!
         type: warning
@@ -81,7 +82,7 @@ projects:
   
   - title: Medication Tracking Mobile Application
     url: https://github.com/sviridovm/doserra
-    desc: Mobile Application featuring accessible design features. Developed using ReactNative, Expo, and SQLite.
+    desc: React Native Mobile Application with an emphasis on accessible design features. Developed using ReactNative, Expo, and SQLite.
     tags:
       - name: Work in Progress!
         type: warning

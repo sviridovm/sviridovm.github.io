@@ -10,6 +10,13 @@
             <div class="card animate-on-scroll">
                 <header class="card-header">
                     <p class="card-header-title">{{ card.title }}</p>
+                    {% if card.url %}
+
+                    <a href="{{ card.url }}" class="github-icon">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    {% endif %}
+
                 </header>
                 <div class="card-content">
                     <div class="content">
@@ -19,11 +26,11 @@
                 
                 
                 
-                {% if card.url %}
+                <!-- {% if card.url %}
                 <footer class="card-footer">
                     <a href="{{ card.url}}" class="card-footer-item">GitHub</a>
                 </footer>
-                {% endif %}
+                {% endif %} -->
 
             </div>
         </div>
