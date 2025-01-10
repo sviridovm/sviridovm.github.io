@@ -196,6 +196,22 @@ body::-webkit-scrollbar, body::-webkit-scrollbar-button
 }
 
 
+.demo-icon {
+    color: whitesmoke;
+    align-self: center;
+    font-size: 25px;
+    margin: 5px;
+    transition: all 0.3s;
+}
+
+.demo-icon:hover {
+    /* color: #2dba4e; */
+    /* color: #33ccff */
+    color: #ff3366;
+    font-size: 30px;
+}
+
+
 
 .form-container {
     justify-content: center;

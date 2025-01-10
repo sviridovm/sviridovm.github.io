@@ -76,6 +76,7 @@ projects:
   - title: Labor Market Economy Simulator
     url: https://github.com/sviridovm/LaborMarketSimulation
     desc: Labor market simulation built in python using Agent Based Modeling. Includes a TKinter UI for elementary data visualization
+    demo: https://labormarketsim.streamlit.app/
     tags:
       - name: Work in Progress!
         type: warning
