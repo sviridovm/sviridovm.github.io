@@ -1,21 +1,21 @@
 navbar:
   - title: Home
-    url: /#home
+    url: '#home'
 
   - title: About
-    url: /#about
+    url: '#about'
 
   - title: Classes
-    url: /#classes
+    url: '#classes'
   
   - title: Projects
-    url: /#projects
+    url: '#projects'
 
   - title: Technologies
-    url: /#skills
+    url: '#skills'
 
   - title: Contact Me
-    url: /#contact 
+    url: '#contact' 
 
   - title: Google it
     url: "/googleit/"
