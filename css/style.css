@@ -291,4 +291,8 @@ body::-webkit-scrollbar, body::-webkit-scrollbar-button
 }
 
 
+.card-header {
+    line-height: 2;
+}
+
 

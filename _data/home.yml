@@ -21,7 +21,7 @@ navbar:
     url: "/googleit/"
 
 me:
-  name: Maks Sviridov
+  name: Maksim Sviridov
   quote: Blazingly Fast 🔥 and Bleeding Edge 🩸 Javascript Framework Enjoyer
   showDesc: False
   desc: 
@@ -36,9 +36,8 @@ me:
   img: 
   linkedin: https://www.linkedin.com/in/maksim-sviridov-921321263/
   github: https://github.com/sviridovm
-  about: Hi👋! My name is Maks, and I am a computer science student at the University of Michigan 〽️. 
+  about: Hi! My name is Maksim, and I am a recent computer science graduate at the University of Michigan 〽️. I will be beginning my masters in CSE at Michigan in the fall. 
           This site showcases my projects, ideas, and insights across a range of interests, from distributed systems and simulations to dynamic web apps and algorithmic designs. 
-          In my free time, I love hanging out with my 4 cats 😺 and watching sports 🏈🏀🏒
   ascii_file: assets/ascii/pic.txt
 
 text_animation:
@@ -52,7 +51,7 @@ text_animation:
 projects:
   - title: C++ Thread Library
     url: 
-    desc: Implemented a virtual C++ Thread Library that includes mutexes, cvs, and support for multiple CPU core systems
+    desc: Implemented a virtual C++ Thread Library that includes mutexes, cvs, and support for multicore processors
     tags:
       - name: 
 
@@ -68,9 +67,9 @@ projects:
     desc: An In-Memory Sharded Vector DB implemented with the FAISS library. Written in Python 
     highlight: OLD
 
-  - title: Wikipedia Search Engine
-    url: 
-    desc: Distributed search engine utilizing MapReduce for indexing and Service-Oriented Architecture. Created a segmented inverted index of web pages, building an Index server with a REST API, and developing a Search server with a user-friendly interface.
+  - title: Search Engine
+    url: https://github.com/SearchEngineDesign/SearchEngine
+    desc: Search engine built from scrath in C++ with minimal dependencies. Indexed more than 40 million web pages. Includes propietary web crawler, HTML parser, inverted index, query compiler, and a ML ranker.
     highlight: 
 
   - title: Labor Market Economy Simulator
@@ -94,8 +93,8 @@ projects:
       - name: Click for Code!
         type: success
       
+    
 classes:
-  - name: Data Structures and Algorithms
   - name: Quantum Computing
   - name: Formal Verification
   - name: Operating Systems
@@ -107,12 +106,14 @@ classes:
   - name: Theory of Computation
   - name: Machine Learning
   - name: Computer Organization
+  - name: Search Engine Design
   
 
 skills: 
   - name: Python
   - name: C++
   - name: Javascript/Typescript
+  - name: Golang
   - name: ReactNative
   - name: React
   - name: Docker
