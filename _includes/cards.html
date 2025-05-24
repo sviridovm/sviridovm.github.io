@@ -1,70 +1,80 @@
 <section class="container content-section" id="projects">
-    <!-- <a href="{{ site.url }}/#projects" class="text-decoration-none"> -->
     <h1 class="name animate__animated animate__fadeInRight animate_faster">Projects</h1>
-    <!-- </a> -->
-    
-    <!-- Bulma Grid with no spacing -->
-    <div class="grid is-col-min-14 is-gap-1">
+    <div class="container">
         {% for card in include.collection %}
-        <div class="cell">
-            <div class="card animate-on-scroll">
+        <div class="columns is-vcentered animate-on-scroll" style="margin-bottom: 3rem;">
+      
+          {% assign is_even = forloop.index0 | modulo: 2 %}
+      
+          {% if is_even == 0 %}
+            <!-- Even: Image Left (if any), Text Right -->
+            <div class="column is-6">
+              <!-- Placeholder for an image or icon if you want to add -->
+              <!-- Or add a project visual here -->
+              <div class="card-image" style="height: 200px; background: var(--gradient-bg, linear-gradient(135deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%)); border-radius: 8px;">
+                <!-- You could put an image here or a color block -->
+              </div>
+            </div>
+            <div class="column is-6">
+              <div class="card">
                 <header class="card-header">
-                    <p class="card-header-title">{{ card.title }}</p>
-                    {% if card.url %}
-
-                    <a href="{{ card.url }}" class="github-icon">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    {% endif %}
-
-                    {% if card.demo %}
-
-                    <a href="{{ card.demo }}" class="demo-icon">
-                        <!-- <i class="fas fa-external-link-alt"></i> -->
-                        <!-- <i class="fa fa-desktop" aria-hidden="true"></i> -->
-                        <span class="demo-icon-text">🚀</span>
-                    </a>
-
-                    {% endif %}
+                  <p class="card-header-title">{{ card.title }}</p>
+                  {% if card.url %}
+                  <a href="{{ card.url }}" class="github-icon">
+                    <i class="fab fa-github"></i>
+                  </a>
+                  {% endif %}
+                  {% if card.demo %}
+                  <a href="{{ card.demo }}" class="demo-icon">
+                    <span class="demo-icon-text">🚀</span>
+                  </a>
+                  {% endif %}
                 </header>
                 <div class="card-content">
-                    <div class="content">
-                        {{ card.desc}}
-                    </div>
+                  <div class="content">
+                    {{ card.desc }}
+                  </div>
                 </div>
-                
-                
-                
-                <!-- {% if card.url %}
-                <footer class="card-footer">
-                    <a href="{{ card.url}}" class="card-footer-item">GitHub</a>
-                </footer>
-                {% endif %} -->
-
+              </div>
             </div>
-        </div>
-            
-        {% endfor %}
-    </div>
-
-    
-    <!-- <div class="columns is-multiline is-gapless">
-        {% for card in include.collection %}
-        <div class="column is-one-third">
-            <div class="card">
+          {% else %}
+            <!-- Odd: Text Left, Image Right -->
+            <div class="column is-6">
+              <div class="card">
                 <header class="card-header">
-                    <p class="card-header-title">{{ card.title }}</p>
+                  <p class="card-header-title">{{ card.title }}</p>
+                  {% if card.url %}
+                  <a href="{{ card.url }}" class="github-icon">
+                    <i class="fab fa-github"></i>
+                  </a>
+                  {% endif %}
+                  {% if card.demo %}
+                  <a href="{{ card.demo }}" class="demo-icon">
+                    <span class="demo-icon-text">🚀</span>
+                  </a>
+                  {% endif %}
                 </header>
                 <div class="card-content">
-                    <div class="content">
-                        {{ card.desc}}
-                    </div>
+                  <div class="content">
+                    {{ card.desc }}
+                  </div>
                 </div>
+              </div>
             </div>
+            <div class="column is-6">
+              <!-- Placeholder for an image or icon -->
+              <div class="card-image" style="height: 200px; background: var(--gradient-bg, linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%)); border-radius: 8px;">
+                <!-- Optional image here -->
+              </div>
+            </div>
+          {% endif %}
         </div>
-            
         {% endfor %}
-    </div> -->
+      </div>
+          
+
+    
+ 
 
 
 </section>

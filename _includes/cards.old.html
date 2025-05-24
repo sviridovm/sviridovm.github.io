@@ -1,0 +1,57 @@
+<section class="container content-section" id="projects">
+    <!-- <a href="{{ site.url }}/#projects" class="text-decoration-none"> -->
+    <h1 class="name animate__animated animate__fadeInRight animate_faster">Projects</h1>
+    <!-- </a> -->
+    
+    <!-- Bulma Grid with no spacing -->
+    <div class="grid is-col-min-14 is-gap-1">
+        {% for card in include.collection %}
+        <div class="cell">
+            <div class="card animate-on-scroll">
+                <header class="card-header">
+                    <p class="card-header-title">{{ card.title }}</p>
+                    {% if card.url %}
+
+                    <a href="{{ card.url }}" class="github-icon">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    {% endif %}
+
+                    {% if card.demo %}
+
+                    <a href="{{ card.demo }}" class="demo-icon">
+                        <!-- <i class="fas fa-external-link-alt"></i> -->
+                        <!-- <i class="fa fa-desktop" aria-hidden="true"></i> -->
+                        <span class="demo-icon-text">🚀</span>
+                    </a>
+
+                    {% endif %}
+                </header>
+                <div class="card-content">
+                    <div class="content">
+                        {{ card.desc}}
+                    </div>
+                </div>
+                
+                
+                
+                <!-- {% if card.url %}
+                <footer class="card-footer">
+                    <a href="{{ card.url}}" class="card-footer-item">GitHub</a>
+                </footer>
+                {% endif %} -->
+
+            </div>
+        </div>
+            
+        {% endfor %}
+    </div>
+
+    
+ 
+
+
+</section>
+
+
+

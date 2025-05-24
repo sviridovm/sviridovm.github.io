@@ -18,7 +18,7 @@ navbar:
     url: '#contact' 
 
   - title: Google it
-    url: "/googleit/"
+    url: "googleit/"
 
 me:
   name: Maksim Sviridov
@@ -36,7 +36,7 @@ me:
   img: 
   linkedin: https://www.linkedin.com/in/maksim-sviridov-921321263/
   github: https://github.com/sviridovm
-  about: Hi! My name is Maksim, and I am a recent computer science graduate at the University of Michigan 〽️. I will be beginning my masters in CSE at Michigan in the fall. 
+  about: Hi! My name is Maksim, and I am a recent computer science graduate at the University of Michigan. I will be beginning my masters in CSE at Michigan in the fall. 
           This site showcases my projects, ideas, and insights across a range of interests, from distributed systems and simulations to dynamic web apps and algorithmic designs. 
   ascii_file: assets/ascii/pic.txt
 
