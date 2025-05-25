@@ -28,7 +28,7 @@
             this.text = key;
 			this.x = Math.random() * w;
 			this.y = Math.random() * h;
-			this.font = words[key] * 10 + 'px arial'
+			this.font = Math.random() * 20 + 20 + 'px';
 			this.speed = Math.random() * 5 + 1;
 		}
 		for (const key of words) {
@@ -52,6 +52,8 @@
                 if (words_attr[i].x > w) {
                     words_attr[i].x = -words_attr[i].width;
 					words_attr[i].y = Math.random()*h;
+                    words_attr[i].font = Math.random() * 20 + 20 + 'px Arial';
+                    words_attr[i].speed = Math.random() * 5 + 1;
 				}else{
                     words_attr[i].x += words_attr[i].speed;
 				}
