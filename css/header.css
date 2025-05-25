@@ -35,7 +35,8 @@
     background: linear-gradient(to left, #ff3366, #33ccff);
     /* transition: width 0.7s ease-out;  */
     margin-bottom: 5px;
-    animation:2s slide-bar linear infinite;
+    animation:2s slide-bar ease infinite, shift-gradient 2s linear infinite;
+
 }
   
   .name:hover::after {
@@ -44,13 +45,25 @@
 
   @keyframes slide-bar {
     0% {
-      transform: translateX(-150%);
+      transform: translateX(-100%);
     }
     50% {
-        transform: translateX(150%);
+        transform: translateX(100%);
     }
     100% {
-      transform: translateX(-150%);
+      transform: translateX(-100%);
+    }
+  }
+
+  @keyframes shift-gradient {
+    0% {
+      background-position: left center;
+    }
+    50% {
+      background-position: right center;
+    }
+    100% {
+      background-position: left center;
     }
   }
 
