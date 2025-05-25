@@ -1,0 +1,70 @@
+<script>
+
+    $(document).ready(function() {
+
+    const words = new Set();
+
+    {% for class in site.data.home.classes %}
+        words.add("{{ class.name }}");
+
+    {% endfor %}
+
+	var words_attr = [];
+
+	var canvas = document.getElementById('class-canvas');
+	canvas.width = window.innerWidth;
+	canvas.height = window.innerHeight;
+
+	if (canvas.getContext) {
+		var c = canvas.getContext('2d'),
+        w = canvas.width,
+        h = canvas.height;
+        
+		c.strokeStyle = 'red';
+		c.fillStyle = 'white';
+		c.lineWidth = 5;
+        
+		// constructor
+		Word = function(key) {
+            this.text = key;
+			this.x = Math.random() * w;
+			this.y = Math.random() * h;
+			this.font = words[key] * 10 + 'px arial'
+			this.speed = Math.random() * 5 + 1;
+		}
+		for (key in words) {
+            words_attr.push(new Word(key));
+		}
+		// console.log(words_attr.length);
+        
+		function animation() {
+            for (var i = 0; i < words_attr.length; i++) {
+                c.font = words_attr[i].font;
+				c.fillText(words_attr[i].text, words_attr[i].x, words_attr[i].y);
+				words_attr[i].width = c.measureText(words_attr[i].text).width;
+				c.stroke();
+			}
+			move();
+		}
+        
+		function move() {
+            for (var i = 0; i < words_attr.length; i++) {
+                if (words_attr[i].x > w) {
+                    words_attr[i].x = -words_attr[i].width;
+					words_attr[i].y = Math.random()*h;
+				}else{
+                    words_attr[i].x += words_attr[i].speed;
+				}
+			}
+		}
+        
+		setInterval(function() {
+            c.clearRect(0,0,w,h);
+			animation();
+		},24);
+        
+	}
+    });
+</script>
+    
+    
