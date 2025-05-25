@@ -167,9 +167,12 @@
 					words_attr[i].y = Math.random()*h;
                     // words_attr[i].fontSize = Math.random() * 40 + 20 
                     words_attr[i].speed = Math.random() * 4 + 1;
+                    words_attr[i].baseFontSize = Math.random() * 20 + 30;
+                    words_attr[i].font = `${baseFontSize}px Arial`;
+
 
                     word.opacity = 0.3 + Math.sin(time + word.index) * 0.5;
-                    word.fontSize = 20 + Math.sin(time + word.index * 3) * 6;
+                    // word.fontSize = 20 + Math.sin(time + word.index * 3) * 6;
 				}else{
                     words_attr[i].x += words_attr[i].speed;
                     words_attr[i].y += Math.sin(words_attr[i].x * 0.01) * 0.5;
