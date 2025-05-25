@@ -45,8 +45,9 @@
                 this.x = Math.random() * w;
                 this.y = Math.random() * h;
                 this.baseFontSize = Math.random() * 20 + 30;
-                this.z = Math.random(); // depth value for parallax
-                this.speed = (1 - this.z) * 2 + 0.5;
+                // this.z = Math.random(); // depth value for parallax
+                // this.speed = (1 - this.z) * 2 + 0.5;
+                this.speed = Math.random() * 4 + 1;
                 this.dx = 0;
                 this.dy = 0;
             }
@@ -72,9 +73,8 @@
                 // this.dx *= 0.9;
                 // this.dy *= 0.9;
 
-                if (this.x > w + 100) {
-                    this.reset();
-                    this.x = -100;
+                if (this.x > w ) {
+                    this.x = -w;
                 }
 
                 this.opacity = 0.4 + Math.sin(time * 0.002 + this.index) * 0.3;
@@ -154,7 +154,7 @@
 		// 		words_attr[i].width = c.measureText(words_attr[i].text).width;
 		// 		c.stroke();
             
-		// 	}
+            // 	}
 		// 	move();
 		// }
         
