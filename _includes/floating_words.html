@@ -33,9 +33,9 @@
             constructor(key, index) {
                 this.index = index;
                 this.text = key;
-                this.gradient = c.createLinearGradient(0, 0, w, 0);
-                this.gradient.addColorStop(0, '#ff3366');
-                this.gradient.addColorStop(1, '#33ccff');
+                // this.gradient = c.createLinearGradient(0, 0, w, 0);
+                // this.gradient.addColorStop(0, '#ff3366');
+                // this.gradient.addColorStop(1, '#33ccff');
                 
                 this.reset();
 
@@ -84,13 +84,13 @@
 
             draw(ctx, time) {
                 ctx.font = `${this.fontSize}px Arial`;
-                ctx.globalAlpha = this.opacity;
+                // ctx.globalAlpha = this.opacity;
                 // ctx.fillStyle = `hsl(${(this.x + time * 0.1) % 360}, 70%, 60%)`;
                 ctx.fillStyle = this.gradient;
                 ctx.fillText(this.text, this.x, this.y);
-        		words_attr[i].width = c.measureText(words_attr[i].text).width;
+        		this.width = c.measureText(this.text).width;
 
-                ctx.globalAlpha = 1;
+                // ctx.globalAlpha = 1;
                 ctx.stroke();
             }
 
@@ -101,6 +101,11 @@
         });
 
         let time = 0;
+
+        const gradient = c.createLinearGradient(0, 0, w, 0);
+            gradient.addColorStop(0, '#ff3366');
+            gradient.addColorStop(1, '#33ccff');
+            c.fillStyle = gradient;
 
         function animate() {
             time++;
