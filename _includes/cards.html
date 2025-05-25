@@ -6,7 +6,7 @@
         {% for card in include.collection %}
         <div class="cell">
             <div class="card animate-on-scroll">
-                <header class="card-header">
+                <!-- <header class="card-header">
                     <p class="card-header-title">{{ card.title }}</p>
                     {% if card.url %}
 
@@ -18,16 +18,23 @@
                     {% if card.demo %}
 
                     <a href="{{ card.demo }}" class="demo-icon">
-                        <!-- <i class="fas fa-external-link-alt"></i> -->
-                        <!-- <i class="fa fa-desktop" aria-hidden="true"></i> -->
                         <span class="demo-icon-text">🚀</span>
                     </a>
 
                     {% endif %}
-                </header>
+                </header> -->
+
+
                 <div class="card-content">
+                    <p class="title is-5">{{ card.title }}</p>
                     <div class="content">
                         {{ card.desc}}
+                    </div>
+                    <div class = "box">
+                        {% if card.url %}
+                        <a href="{{ card.url }}" class="github-icon">
+                            <i class="fab fa-github"></i>
+                        </a>
                     </div>
                 </div>
                 
