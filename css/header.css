@@ -35,16 +35,17 @@
     transition: all 0.7s ease-out; 
     margin-bottom: 5px;
     filter: blur(0.5px);
-    transform: scaleX(0);
+    /* transform: scaleX(0); */
     transform-origin: center;
+    width: 0%;
 
     /* animation:2s slide-bar ease infinite, shift-gradient 2s linear infinite; */
 
 }
   
   .name:hover::after {
-
-    transform: scaleX(1);
+    width: 100%;
+    /* transform: scaleX(1); */
   }
 
   @keyframes slide-bar {
