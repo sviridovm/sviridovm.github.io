@@ -2,11 +2,10 @@
 
     $(document).ready(function() {
 
-    const words = new Set();
+    const words = [];
 
     {% for class in site.data.home.classes %}
-        words.add("{{ class.name }}");
-
+        words.push("{{ class.name }}");
     {% endfor %}
 
 	var words_attr = [];
@@ -32,7 +31,8 @@
 			this.font = words[key] * 10 + 'px arial'
 			this.speed = Math.random() * 5 + 1;
 		}
-		for (key in words) {
+		for (const key of words) {
+            console.log(key);
             words_attr.push(new Word(key));
 		}
 		// console.log(words_attr.length);
