@@ -270,8 +270,8 @@ body::-webkit-scrollbar, body::-webkit-scrollbar-button
 }
 
 
-.class-card {
-    min-height: 15vh;
+.my-footer {
+    margin-top: auto;
 }
 
 .submit-button {

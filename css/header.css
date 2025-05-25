@@ -34,9 +34,9 @@
     height: 2px; /* Line thickness */
     /* background: linear-gradient(to right, #ff7e5f, #feb47b); */
     background: linear-gradient(to left, #ff3366, #33ccff);
-    transition: width 0.7s ease-out; 
+    /* transition: width 0.7s ease-out;  */
     margin-bottom: 5px;
-    /* animation:5s spotlight infinite; */
+    animation:2s slide-bar linear infinite;
     /* background-position:center center; */
     /* -webkit-background-clip:text; */
     /* background-clip:text;  */
@@ -46,19 +46,12 @@
     width: 100%; /* Expand underline */
   }
 
-  /* animation that sets witdth to 100% then to 0 */
-  @keyframes spotlight{
-    0%{
-      -webkit-clip-path:ellipse(100px 100px at 0% 50%);
-    clip-path:ellipse(100px 100px at 0% 50%);
+  @keyframes slide-bar {
+    0% {
+      transform: translateX(-100%);
     }
-    50%{
-      -webkit-clip-path:ellipse(100px 100px at 100% 50%);
-    clip-path:ellipse(100px 100px at 100% 50%);
-    }
-    100%{
-      -webkit-clip-path:ellipse(100px 100px at 0% 50%);
-    clip-path:ellipse(100px 100px at 0% 50%);
+    100% {
+      transform: translateX(100%);
     }
   }
 

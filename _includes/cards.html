@@ -31,13 +31,10 @@
                         {{ card.desc}}
                     </div>
                     
-
-                </div>
-                <footer class="card-footer">
-                    <div class="grid">
+                    <div class="grid my-footer">
                         {% if card.url %}
                         <a href="{{ card.url }}" class="github-icon">
-                        <div class="cell has-text-centered">
+                        <div class="cell has-text-centered my-cell">
                             <span class="box my-box">
                                     <i class="fab fa-github"></i>
                                     Github
@@ -45,7 +42,7 @@
                             </div>
                         </a>
                         {% endif %}
-
+    
                         {% if card.demo %}
                         <a href="{{ card.demo }}" class="demo-icon">
                         <div class="cell has-text-centered">
@@ -57,7 +54,10 @@
                         </a>
                         {% endif %}
                     </div>
-                </footer>
+                    
+                    
+                </div>
+                
 
             </div>
         </div>
