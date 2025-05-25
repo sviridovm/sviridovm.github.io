@@ -33,25 +33,25 @@
                     
                     <div class="grid">
                         {% if card.url %}
+                        <a href="{{ card.url }}" class="github-icon">
                         <div class="cell has-text-centered">
-                            <span class="box">
-                                <a href="{{ card.url }}" class="github-icon">
+                            <span class="box my-box">
                                     <i class="fab fa-github"></i>
-                                </a>
-                                Github
-                            </span>
-                        </div>
+                                    Github
+                                </span>
+                            </div>
+                        </a>
                         {% endif %}
 
                         {% if card.demo %}
+                        <a href="{{ card.demo }}" class="demo-icon">
                         <div class="cell has-text-centered">
-                            <span class="box">
-                                <a href="{{ card.demo }}" class="demo-icon">
+                            <span class="box my-box">
                                     <span class="demo-icon-text">🚀</span>
-                                </a>
-                                Demo
-                            </span>
-                        </div>
+                                    Demo
+                                </span>
+                            </div>
+                        </a>
                         {% endif %}
                     </div>
 
