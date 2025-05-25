@@ -24,20 +24,22 @@
 }
 
 .name::after {
-    content: "";
+    /* content: ""; */
+    content:attr(data-spotlight);
+
     position: absolute;
     left: 0;
     bottom: -2px; /* Distance below text */
-    /* width: 100%; Start hidden */
+    width: 100%; 
     height: 2px; /* Line thickness */
     /* background: linear-gradient(to right, #ff7e5f, #feb47b); */
     background: linear-gradient(to left, #ff3366, #33ccff);
     /* transition: width 0.7s ease-out; Smooth underline scaling */
     margin-bottom: 5px;
-
-    transform: scaleX(0);
-    transform-origin: left;
-    animation: underline-slide 2s ease-in-out infinite;
+    animation:5s spotlight infinite;
+    background-position:center center;
+    -webkit-background-clip:text;
+    background-clip:text; 
 }
   
   .name:hover::after {
@@ -45,24 +47,18 @@
   }
 
   /* animation that sets witdth to 100% then to 0 */
-  @keyframes underline-slide {
-    0% {
-      transform: scaleX(0);
-      transform-origin: left;
-      opacity: 0.4;
+  @keyframes spotlight{
+    0%{
+      -webkit-clip-path:ellipse(100px 100px at 0% 50%);
+    clip-path:ellipse(100px 100px at 0% 50%);
     }
-    50% {
-      transform: scaleX(1);
-      transform-origin: left;
-      opacity: 1;
+    50%{
+      -webkit-clip-path:ellipse(100px 100px at 100% 50%);
+    clip-path:ellipse(100px 100px at 100% 50%);
     }
-    51% {
-      transform-origin: right; /* switch origin to slide back */
-    }
-    100% {
-      transform: scaleX(0);
-      transform-origin: right;
-      opacity: 0.4;
+    100%{
+      -webkit-clip-path:ellipse(100px 100px at 0% 50%);
+    clip-path:ellipse(100px 100px at 0% 50%);
     }
   }
 
