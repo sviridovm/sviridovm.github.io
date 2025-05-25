@@ -113,6 +113,19 @@ body::-webkit-scrollbar, body::-webkit-scrollbar-button
     
 }
 
+.box {
+    background: #363434;
+    box-shadow: none;
+}
+
+.box:hover {
+    box-shadow: 0 0 10px rgba(255, 51, 102, 0.5);
+    /* background: #363434; */
+    /* background: linear-gradient(45deg, #ff3366, #33ccff); */
+    /* background: linear-gradient(45deg, #ff3366, #33ccff); */
+    /* background: linear-gradient(45deg, #ff3366, #33ccff); */
+}
+
 .card.visible {
 
     opacity: 1;

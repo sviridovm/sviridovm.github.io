@@ -2,7 +2,7 @@
     <h1 class="name animate__animated animate__fadeInRight animate_faster">Projects</h1>
     
     <!-- Bulma Grid with no spacing -->
-    <div class="grid is-col-min-14 is-gap-1">
+    <div class="grid is-col-min-18 is-gap-1">
         {% for card in include.collection %}
         <div class="cell">
             <div class="card animate-on-scroll">
@@ -30,12 +30,32 @@
                     <div class="content">
                         {{ card.desc}}
                     </div>
-                    <div class = "box">
+                    
+                    <div class="grid">
                         {% if card.url %}
-                        <a href="{{ card.url }}" class="github-icon">
-                            <i class="fab fa-github"></i>
-                        </a>
+                        <div class="cell has-text-centered">
+                            <span class="box">
+                                <a href="{{ card.url }}" class="github-icon">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                Github
+                            </span>
+                        </div>
+                        {% endif %}
+
+                        {% if card.demo %}
+                        <div class="cell has-text-centered">
+                            <span class="box">
+                                <a href="{{ card.demo }}" class="demo-icon">
+                                    <span class="demo-icon-text">🚀</span>
+                                </a>
+                                Demo
+                            </span>
+                        </div>
+                        {% endif %}
                     </div>
+
+
                 </div>
                 
            
