@@ -79,14 +79,14 @@
 
                 this.opacity = 0.4 + Math.sin(time * 0.002 + this.index) * 0.3;
                 this.fontSize = this.baseFontSize + Math.sin(time * 0.004 + this.index) * 5;
+                ctx.font = `${this.fontSize}px Arial`;
 
             }
 
             draw(ctx, time) {
-                ctx.font = `${this.fontSize}px Arial`;
                 // ctx.globalAlpha = this.opacity;
                 // ctx.fillStyle = `hsl(${(this.x + time * 0.1) % 360}, 70%, 60%)`;
-                ctx.fillStyle = this.gradient;
+                // ctx.fillStyle = this.gradient;
                 ctx.fillText(this.text, this.x, this.y);
         		this.width = c.measureText(this.text).width;
 
