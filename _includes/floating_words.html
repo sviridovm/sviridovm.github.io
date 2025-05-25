@@ -127,57 +127,55 @@
         // animate();
 
 
-        function animation() {
-            time++;
+        // function animation() {
+        //     time++;
 
-            let c = canvas.getContext('2d'),
+        //     let c = canvas.getContext('2d'),
 
-            for (var i = 0; i < words_attr.length; i++) {
-                words_attr[i].draw(c, time);
-            }
+        //     for (var i = 0; i < words_attr.length; i++) {
+        //         words_attr[i].draw(c, time);
+        //     }
 
-            for (var i = 0; i < words_attr.length; i++) {
-                words_attr[i].update(time);
-            }
-        }
+        //     for (var i = 0; i < words_attr.length; i++) {
+        //         words_attr[i].update(time);
+        //     }
+        // }
 
         
 
-		// function animation() {
-        //     const gradient = c.createLinearGradient(0, 0, w, 0);
-        //     gradient.addColorStop(0, '#ff3366');
-        //     gradient.addColorStop(1, '#33ccff');
-        //     c.fillStyle = gradient;
+		function animation() {
+            const gradient = c.createLinearGradient(0, 0, w, 0);
+            gradient.addColorStop(0, '#ff3366');
+            gradient.addColorStop(1, '#33ccff');
+            c.fillStyle = gradient;
 
 
-        //     for (var i = 0; i < words_attr.length; i++) {
+            for (var i = 0; i < words_attr.length; i++) {
 
-        //         c.fillText(words_attr[i].text, words_attr[i].x, words_attr[i].y);
-		// 		words_attr[i].width = c.measureText(words_attr[i].text).width;
-		// 		c.stroke();
+                c.fillText(words_attr[i].text, words_attr[i].x, words_attr[i].y);
+				words_attr[i].width = c.measureText(words_attr[i].text).width;
+				c.stroke();
             
-            // 	}
-		// 	move();
-		// }
+            	}
+			move();
+		}
         
-		// function move() {
-        //     for (var i = 0; i < words_attr.length; i++) {
-        //         if (words_attr[i].x > w) {
-        //             words_attr[i].x = -words_attr[i].width;
-		// 			words_attr[i].y = Math.random()*h;
-        //             // words_attr[i].fontSize = Math.random() * 40 + 20 
-        //             words_attr[i].speed = Math.random() * 4 + 1;
+		function move() {
+            for (var i = 0; i < words_attr.length; i++) {
+                if (words_attr[i].x > w) {
+                    words_attr[i].x = -words_attr[i].width;
+					words_attr[i].y = Math.random()*h;
+                    // words_attr[i].fontSize = Math.random() * 40 + 20 
+                    words_attr[i].speed = Math.random() * 4 + 1;
 
-        //             word.opacity = 0.3 + Math.sin(time + word.index) * 0.5;
-        //             word.fontSize = 20 + Math.sin(time + word.index * 3) * 6;
-		// 		}else{
-        //             words_attr[i].x += words_attr[i].speed;
-        //             words_attr[i].y += Math.sin(words_attr[i].x * 0.01) * 0.5;
-        //             ctx.fillStyle = 'rgba(0, 0, 0, 0.1)';
-        //             ctx.fillRect(0, 0, canvas.width, canvas.height);
-		// 		}
-		// 	}
-		// }
+                    word.opacity = 0.3 + Math.sin(time + word.index) * 0.5;
+                    word.fontSize = 20 + Math.sin(time + word.index * 3) * 6;
+				}else{
+                    words_attr[i].x += words_attr[i].speed;
+                    words_attr[i].y += Math.sin(words_attr[i].x * 0.01) * 0.5;
+				}
+			}
+		}
         
 		setInterval(function() {
             c.clearRect(0,0,w,h);
