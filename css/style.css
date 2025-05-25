@@ -120,7 +120,7 @@ body::-webkit-scrollbar, body::-webkit-scrollbar-button
 
 .my-box:hover {
     /* border: 0 0 10px rgba(255, 51, 102, 0.5); */
-    border-color: #33ccff;
+    /* border-color: #33ccff; */    
     /* background: #363434; */
     /* background: linear-gradient(45deg, #ff3366, #33ccff); */
     /* background: linear-gradient(45deg, #ff3366, #33ccff); */
@@ -267,6 +267,11 @@ body::-webkit-scrollbar, body::-webkit-scrollbar-button
     width: 50%;
     text-align: center;
 
+}
+
+
+.class-card {
+    min-height: 15vh;
 }
 
 .submit-button {
