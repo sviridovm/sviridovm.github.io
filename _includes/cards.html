@@ -30,34 +30,31 @@
                     <div class="content">
                         {{ card.desc}}
                     </div>
-                    
-                    <div class="grid my-footer">
-                        {% if card.url %}
-                        <a href="{{ card.url }}" class="github-icon">
-                        <div class="cell has-text-centered my-cell">
-                            <span class="box my-box">
-                                    <i class="fab fa-github"></i>
-                                    Github
-                                </span>
-                            </div>
-                        </a>
-                        {% endif %}
-    
-                        {% if card.demo %}
-                        <a href="{{ card.demo }}" class="demo-icon">
-                        <div class="cell has-text-centered">
-                            <span class="box my-box">
-                                    <span class="demo-icon-text">🚀</span>
-                                    Demo
-                                </span>
-                            </div>
-                        </a>
-                        {% endif %}
-                    </div>
-                    
-                    
                 </div>
                 
+                <div class="grid my-grid">
+                    {% if card.url %}
+                    <a href="{{ card.url }}" class="github-icon">
+                    <div class="cell has-text-centered my-cell">
+                        <span class="box my-box">
+                                <i class="fab fa-github"></i>
+                                Github
+                            </span>
+                        </div>
+                    </a>
+                    {% endif %}
+
+                    {% if card.demo %}
+                    <a href="{{ card.demo }}" class="demo-icon">
+                    <div class="cell has-text-centered">
+                        <span class="box my-box">
+                                <span class="demo-icon-text">🚀</span>
+                                Demo
+                            </span>
+                        </div>
+                    </a>
+                    {% endif %}
+                </div>
 
             </div>
         </div>
