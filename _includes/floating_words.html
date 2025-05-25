@@ -91,7 +91,7 @@
         		this.width = c.measureText(this.text).width;
 
                 // ctx.globalAlpha = 1;
-                ctx.stroke();
+                // ctx.stroke();
             }
 
         }
@@ -129,6 +129,8 @@
 
         function animation() {
             time++;
+
+            let c = canvas.getContext('2d'),
 
             for (var i = 0; i < words_attr.length; i++) {
                 words_attr[i].draw(c, time);
