@@ -10,7 +10,7 @@
 
 
     let words = [];
-    words = words.concat(words2).concat(words2);
+    words = words.concat(words2);
 
 	var words_attr = [];
 
@@ -42,6 +42,7 @@
             }
 
             reset() {
+                this.font = Math.random() * 20 + 50 + 'px Arial';
                 this.x = Math.random() * w;
                 this.y = Math.random() * h;
                 this.baseFontSize = Math.random() * 20 + 30;
@@ -169,8 +170,8 @@
                     words_attr[i].speed = Math.random() * 4 + 1;
                     words_attr[i].baseFontSize = Math.random() * 20 + 30;
                     // words_attr[i].font = `${baseFontSize}px Arial`;
-                    words_attr[i].font = Math.random() * 20 + 30 + 'px Arial';
-                    word.opacity = 0.3 + Math.sin(time + word.index) * 0.5;
+                    words_attr[i].font = Math.random() * 20 + 50 + 'px Arial';
+                    // word.opacity = 0.3 + Math.sin(time + word.index) * 0.5;
                     // word.fontSize = 20 + Math.sin(time + word.index * 3) * 6;
 				}else{
                     words_attr[i].x += words_attr[i].speed;
