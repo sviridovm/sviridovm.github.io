@@ -25,7 +25,6 @@
 
 .name::after {
     content: "";
-
     position: absolute;
     left: 0;
     bottom: -2px; /* Distance below text */
@@ -33,7 +32,7 @@
     height: 2px; /* Line thickness */
     /* background: linear-gradient(to right, #ff7e5f, #feb47b); */
     background: linear-gradient(to left, #ff3366, #33ccff);
-    transition: width 0.7s ease-out; 
+    transition: all 0.7s ease-out; 
     margin-bottom: 5px;
     filter: blur(0.5px);
     /* animation:2s slide-bar ease infinite, shift-gradient 2s linear infinite; */
@@ -42,6 +41,7 @@
   
   .name:hover::after {
      width: 100%; /*Expand underline */
+     transform: translateX(0%);
   }
 
   @keyframes slide-bar {
@@ -129,22 +129,7 @@
     border-width: 3px;
 }
 
-.content-section::after {
-    content: "";
-    position: absolute;
-    top: -3px;
-    left: -3px;
-    height: calc(100% + 6px);
-    width: calc(100% + 6px);
-    background-size: 300% 300%;
-    z-index: -1;
 
-}
-
-.content-section::after:hover {
-    background: linear-gradient(to right, #ff3366, #33ccff);
-    animation: animategradient 5s ease infinite;
-}
 
 @keyframes animatedgradient {
 	0% {

@@ -228,6 +228,22 @@ body::-webkit-scrollbar, body::-webkit-scrollbar-button
 }
 
 
+.my-icon::after {
+    content: "";
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    height: calc(100% + 6px);
+    width: calc(100% + 6px);
+    background-size: 300% 300%;
+    z-index: -1;
+
+}
+
+.my-icon::after:hover {
+    background: linear-gradient(to right, #ff3366, #33ccff);
+    animation: animategradient 5s ease infinite;
+}
 
 .form-container {
     justify-content: center;
