@@ -151,7 +151,7 @@
 
 
             for (var i = 0; i < words_attr.length; i++) {
-
+                c.font = words_attr[i].font;
                 c.fillText(words_attr[i].text, words_attr[i].x, words_attr[i].y);
 				words_attr[i].width = c.measureText(words_attr[i].text).width;
 				c.stroke();
@@ -168,9 +168,8 @@
                     // words_attr[i].fontSize = Math.random() * 40 + 20 
                     words_attr[i].speed = Math.random() * 4 + 1;
                     words_attr[i].baseFontSize = Math.random() * 20 + 30;
-                    words_attr[i].font = `${baseFontSize}px Arial`;
-
-
+                    // words_attr[i].font = `${baseFontSize}px Arial`;
+                    words_attr[i].font = Math.random() * 20 + 30 + 'px Arial';
                     word.opacity = 0.3 + Math.sin(time + word.index) * 0.5;
                     // word.fontSize = 20 + Math.sin(time + word.index * 3) * 6;
 				}else{
