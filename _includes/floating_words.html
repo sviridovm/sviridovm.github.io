@@ -107,25 +107,37 @@
             gradient.addColorStop(1, '#33ccff');
             c.fillStyle = gradient;
 
-        function animate() {
+        // function animate() {
+        //     time++;
+
+        //     // Fade effect
+        //     // c.fillStyle = 'rgba(0, 0, 0, 0.15)';
+        //     // c.fillRect(0, 0, w, h);
+
+        //     words_attr.forEach(word => {
+        //         word.update(time);
+        //         word.draw(c, time);
+        //     });
+
+        //     c.clearRect(0, 0, w, h);
+
+        //     requestAnimationFrame(animate);
+        // }
+
+        // animate();
+
+
+        function animation() {
             time++;
 
-            // Fade effect
-            // c.fillStyle = 'rgba(0, 0, 0, 0.15)';
-            // c.fillRect(0, 0, w, h);
+            for (var i = 0; i < words_attr.length; i++) {
+                words_attr[i].draw(c, time);
+            }
 
-            words_attr.forEach(word => {
-                word.update(time);
-                word.draw(c, time);
-            });
-
-            c.clearRect(0, 0, w, h);
-
-            requestAnimationFrame(animate);
+            for (var i = 0; i < words_attr.length; i++) {
+                words_attr[i].update(time);
+            }
         }
-
-        animate();
-
 
         
 
@@ -165,10 +177,10 @@
 		// 	}
 		// }
         
-		// setInterval(function() {
-        //     c.clearRect(0,0,w,h);
-		// 	animation();
-		// },24);
+		setInterval(function() {
+            c.clearRect(0,0,w,h);
+			animation();
+		},24);
         
 	}
     });
