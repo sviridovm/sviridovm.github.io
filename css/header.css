@@ -17,7 +17,7 @@
 .name:hover {
     /* text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5); */
     /* background: linear-gradient(to left, #ff3366, #33ccff); */
-    background-clip: text;
+    /* background-clip: text; */
     /* display: inline-block; */
 
 
@@ -34,12 +34,12 @@
     height: 2px; /* Line thickness */
     /* background: linear-gradient(to right, #ff7e5f, #feb47b); */
     background: linear-gradient(to left, #ff3366, #33ccff);
-    /* transition: width 0.7s ease-out; Smooth underline scaling */
+    transition: width 0.7s ease-out; 
     margin-bottom: 5px;
-    animation:5s spotlight infinite;
-    background-position:center center;
-    -webkit-background-clip:text;
-    background-clip:text; 
+    /* animation:5s spotlight infinite; */
+    /* background-position:center center; */
+    /* -webkit-background-clip:text; */
+    /* background-clip:text;  */
 }
   
   .name:hover::after {
