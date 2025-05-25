@@ -76,7 +76,7 @@
                     this.reset();
                     this.x = -100;
                 }
-                
+
                 this.opacity = 0.4 + Math.sin(time * 0.002 + this.index) * 0.3;
                 this.fontSize = this.baseFontSize + Math.sin(time * 0.004 + this.index) * 5;
 
@@ -88,6 +88,8 @@
                 // ctx.fillStyle = `hsl(${(this.x + time * 0.1) % 360}, 70%, 60%)`;
                 ctx.fillStyle = this.gradient;
                 ctx.fillText(this.text, this.x, this.y);
+        		words_attr[i].width = c.measureText(words_attr[i].text).width;
+
                 ctx.globalAlpha = 1;
                 ctx.stroke();
             }
@@ -112,24 +114,15 @@
                 word.draw(c, time);
             });
 
+            c.clearRect(0, 0, w, h);
+
             requestAnimationFrame(animate);
         }
 
         animate();
 
 
-        // Mouse movement
-        window.addEventListener('mousemove', (e) => {
-            mouse.x = e.clientX;
-            mouse.y = e.clientY;
-        });
-
-        // Responsive resize
-        window.addEventListener('resize', () => {
-            w = canvas.width = window.innerWidth;
-            h = canvas.height = window.innerHeight;
-        });
-
+        
 
 		// function animation() {
         //     const gradient = c.createLinearGradient(0, 0, w, 0);
