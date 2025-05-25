@@ -23,57 +23,144 @@
         w = canvas.width,
         h = canvas.height;
         
-		c.strokeStyle = 'red';
 		c.fillStyle = 'white';
 		c.lineWidth = 5;
         
-		// constructor
-		Word = function(key) {
-            this.text = key;
-			this.x = Math.random() * w;
-			this.y = Math.random() * h;
-			this.font = Math.random() * 40 + 20 + 'px Arial';
-			this.speed = Math.random() * 5 + 1;
-		}
-		for (const key of words) {
-            console.log(key);
-            words_attr.push(new Word(key));
-		}
-		// console.log(words_attr.length);
-        
-        const gradient = c.createLinearGradient(0, 0, w, 0);
-        gradient.addColorStop(0, '#ff3366');
-        gradient.addColorStop(1, '#33ccff');
-        c.fillStyle = gradient;
 
-		function animation() {
-            for (var i = 0; i < words_attr.length; i++) {
-                c.font = words_attr[i].font;
-				c.fillText(words_attr[i].text, words_attr[i].x, words_attr[i].y);
-				words_attr[i].width = c.measureText(words_attr[i].text).width;
-				c.stroke();
+        let mouse = { x: -9999, y: -9999 };
+
+        class Word {
+            constructor(key, index) {
+                this.index = index;
+                this.text = key;
+                this.reset();
+            }
+
+            reset() {
+                this.x = Math.random() * w;
+                this.y = Math.random() * h;
+                this.baseFontSize = Math.random() * 20 + 20;
+                this.z = Math.random(); // depth value for parallax
+                this.speed = (1 - this.z) * 2 + 0.5;
+                this.dx = 0;
+                this.dy = 0;
+            }
             
-			}
-			move();
-		}
+            update(time) {
+                 // Repel from mouse
+                 const dx = this.x - mouse.x;
+                const dy = this.y - mouse.y;
+                const dist = Math.sqrt(dx * dx + dy * dy);
+                const repelRadius = 100;
+
+                if (dist < repelRadius) {
+                    const force = (repelRadius - dist) / repelRadius;
+                    this.dx += (dx / dist) * force * 2;
+                    this.dy += (dy / dist) * force * 2;
+                }
+
+                // Parallax movement
+                this.x += this.speed + this.dx;
+                this.y += Math.sin(this.x * 0.01 + this.index) * 0.5 + this.dy;
+
+                // friction
+                this.dx *= 0.9;
+                this.dy *= 0.9;
+
+                if (this.x > w + 100) this.x = -100;
+
+                this.opacity = 0.4 + Math.sin(time * 0.002 + this.index) * 0.3;
+                this.fontSize = this.baseFontSize + Math.sin(time * 0.004 + this.index) * 5;
+
+            }
+
+            draw(ctx, time) {
+                ctx.font = `${this.fontSize}px Arial`;
+                ctx.globalAlpha = this.opacity;
+                ctx.fillStyle = `hsl(${(this.x + time * 0.1) % 360}, 70%, 60%)`;
+                ctx.fillText(this.text, this.x, this.y);
+                ctx.globalAlpha = 1;
+            }
+
+        }
+
+        words.forEach((word, i) => {
+            words_attr.push(new Word(word, i));
+        });
+
+        let time = 0;
+
+        function animate() {
+            time++;
+
+            // Fade effect
+            c.fillStyle = 'rgba(0, 0, 0, 0.15)';
+            c.fillRect(0, 0, w, h);
+
+            words_attr.forEach(word => {
+                word.update(time);
+                word.draw(c, time);
+            });
+
+            requestAnimationFrame(animate);
+        }
+
+        animate();
+
+
+        // Mouse movement
+        window.addEventListener('mousemove', (e) => {
+            mouse.x = e.clientX;
+            mouse.y = e.clientY;
+        });
+
+        // Responsive resize
+        window.addEventListener('resize', () => {
+            w = canvas.width = window.innerWidth;
+            h = canvas.height = window.innerHeight;
+        });
+
+
+		// function animation() {
+        //     const gradient = c.createLinearGradient(0, 0, w, 0);
+        //     gradient.addColorStop(0, '#ff3366');
+        //     gradient.addColorStop(1, '#33ccff');
+        //     c.fillStyle = gradient;
+
+
+        //     for (var i = 0; i < words_attr.length; i++) {
+
+        //         c.fillText(words_attr[i].text, words_attr[i].x, words_attr[i].y);
+		// 		words_attr[i].width = c.measureText(words_attr[i].text).width;
+		// 		c.stroke();
+            
+		// 	}
+		// 	move();
+		// }
         
-		function move() {
-            for (var i = 0; i < words_attr.length; i++) {
-                if (words_attr[i].x > w) {
-                    words_attr[i].x = -words_attr[i].width;
-					words_attr[i].y = Math.random()*h;
-                    words_attr[i].font = Math.random() * 40 + 20 + 'px Arial';
-                    words_attr[i].speed = Math.random() * 4 + 1;
-				}else{
-                    words_attr[i].x += words_attr[i].speed;
-				}
-			}
-		}
+		// function move() {
+        //     for (var i = 0; i < words_attr.length; i++) {
+        //         if (words_attr[i].x > w) {
+        //             words_attr[i].x = -words_attr[i].width;
+		// 			words_attr[i].y = Math.random()*h;
+        //             // words_attr[i].fontSize = Math.random() * 40 + 20 
+        //             words_attr[i].speed = Math.random() * 4 + 1;
+
+        //             word.opacity = 0.3 + Math.sin(time + word.index) * 0.5;
+        //             word.fontSize = 20 + Math.sin(time + word.index * 3) * 6;
+		// 		}else{
+        //             words_attr[i].x += words_attr[i].speed;
+        //             words_attr[i].y += Math.sin(words_attr[i].x * 0.01) * 0.5;
+        //             ctx.fillStyle = 'rgba(0, 0, 0, 0.1)';
+        //             ctx.fillRect(0, 0, canvas.width, canvas.height);
+		// 		}
+		// 	}
+		// }
         
-		setInterval(function() {
-            c.clearRect(0,0,w,h);
-			animation();
-		},24);
+		// setInterval(function() {
+        //     c.clearRect(0,0,w,h);
+		// 	animation();
+		// },24);
         
 	}
     });
