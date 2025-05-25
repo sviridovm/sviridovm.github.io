@@ -17,15 +17,14 @@
 .name:hover {
     /* text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5); */
     /* background: linear-gradient(to left, #ff3366, #33ccff); */
-    /* background-clip: text; */
+    background-clip: text;
     /* display: inline-block; */
 
 
 }
 
 .name::after {
-    /* content: ""; */
-    content:attr(data-spotlight);
+    content: "";
 
     position: absolute;
     left: 0;
@@ -37,9 +36,6 @@
     /* transition: width 0.7s ease-out;  */
     margin-bottom: 5px;
     animation:2s slide-bar linear infinite;
-    /* background-position:center center; */
-    /* -webkit-background-clip:text; */
-    /* background-clip:text;  */
 }
   
   .name:hover::after {
