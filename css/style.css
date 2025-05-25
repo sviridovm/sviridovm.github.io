@@ -333,6 +333,7 @@ body::-webkit-scrollbar, body::-webkit-scrollbar-button
 }
 
 #class-canvas {
+    background-color: transparent;
     width: 100vh;
 }
 
