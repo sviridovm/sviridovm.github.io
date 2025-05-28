@@ -67,14 +67,14 @@ projects:
     desc: An In-Memory Sharded Vector DB implemented with the FAISS library. Written in Python 
     highlight: OLD
 
-  - title: Search Engine
+  - title: C++ Search Engine
     url: https://github.com/SearchEngineDesign/SearchEngine
-    desc: Search engine built from scrath in C++ with minimal dependencies. Indexed more than 40 million web pages. Includes propietary web crawler, HTML parser, inverted index, query compiler, and a ML ranker.
+    desc: Search engine built from scrath in C++ only depending on OpenSSL. Used a distributed crawler/indexer architecture to index over 50 million web pages on GCP. Includes propietary web crawler, HTML parser, inverted index, query compiler, constraint solver, and a ML ranker.
     highlight: 
 
   - title: Labor Market Economy Simulator
     url: https://github.com/sviridovm/LaborMarketSimulation
-    desc: Labor market simulation built in python using Agent Based Modeling. Includes a TKinter UI for elementary data visualization
+    desc: Labor market simulation built in python using Agent Based Modeling. Includes a StreamLit UI for elementary data visualization
     demo: https://labormarketsim.streamlit.app/
     tags:
       - name: Work in Progress!
@@ -124,6 +124,7 @@ skills:
   - name: Node.js
   - name: Flask
   - name: FastAPI
+  # - name: Ros2
 
 
 
