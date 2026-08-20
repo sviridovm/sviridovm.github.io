@@ -1,5 +1,4 @@
 {% assign data = site.data.home.me %}
-<!-- <header class="header"> -->
 <section class="container text-center top-section" id="home">
     <h1 class="name animate__animated animate__fadeInRight animate_faster">{{ data.name }}
     </h1>
@@ -15,19 +14,23 @@
             <a href="{{ data.linkedin }}" class="social-icon animate__fadeIn" target="_blank" rel="noopener noreferrer">
                 <i class="fab fa-linkedin"></i>
             </a>
-            <!-- <a href="{{ data.twitter }}" class="social-icon" target="_blank" rel="noopener noreferrer">
-                <i class="fab fa-twitter"></i>
+
+            <a href="{{ data.resume }}"
+            class="social-icon resume-icon"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Resume"
+            title="Resume">
+
+                <i class="fas fa-file-alt"></i>
+                <span class="resume-label">CV</span>
+
             </a>
-            <a href="{{ data.instagram }}" class="social-icon" target="_blank" rel="noopener noreferrer">
-                <i class="fab fa-instagram"></i>
-            </a> -->
+
         </div>
         <div class="col-md-12 ">
             <span class="description animate__animated"></span>
-            <!-- <span class="cursor">|</span> -->
-            <!-- <img src="{{ data.img }}" alt="profile" class=""> -->
         </div>
     </div>
 
 </section>
-<!-- </header> -->

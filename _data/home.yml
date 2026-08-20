@@ -31,6 +31,7 @@ me:
   ascii_file: assets/ascii/pic.txt
   linkedin: https://www.linkedin.com/in/maksim-sviridov-921321263/
   github: https://github.com/sviridovm
+  resume: assets/files/resume.pdf
   details:
     - label: Education
       value: |

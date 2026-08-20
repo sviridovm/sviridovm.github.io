@@ -1,157 +1,179 @@
-.name {
-    background: linear-gradient(to right, #ff3366, #33ccff);
-    background-clip: text;
-    /* color: transparent; */
-    font-size: max(3rem, 7vw);
-    /* display: inline-block; */
+  .name {
+      background: linear-gradient(to right, #ff3366, #33ccff);
+      background-clip: text;
+      /* color: transparent; */
+      font-size: max(3rem, 7vw);
+      /* display: inline-block; */
 
-    /* background: linear-gradient(to right, #ff7e5f, #feb47b); */
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    cursor: pointer; /* Adds pointer to indicate interactable text */
-    transition: all 0.3s ease-in-out;
-    margin-bottom: 10px;
+      /* background: linear-gradient(to right, #ff7e5f, #feb47b); */
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      cursor: pointer; /* Adds pointer to indicate interactable text */
+      transition: all 0.3s ease-in-out;
+      margin-bottom: 10px;
 
-}
-
-.name:hover {
-    /* text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5); */
-    /* background: linear-gradient(to left, #ff3366, #33ccff); */
-    background-clip: text;
-    /* display: inline-block; */
-
-
-}
-
-.name::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -2px; /* Distance below text */
-    /* width: 0%;  */
-    height: 2px; /* Line thickness */
-    /* background: linear-gradient(to right, #ff7e5f, #feb47b); */
-    background: linear-gradient(to left, #ff3366, #33ccff);
-    transition: all 0.7s ease-out; 
-    margin-bottom: 5px;
-    filter: blur(0.5px);
-    /* transform: scaleX(0); */
-    transform-origin: center;
-    width: 0%;
-
-    /* animation:2s slide-bar ease infinite, shift-gradient 2s linear infinite; */
-
-}
-  
-  .name:hover::after {
-    width: 100%;
-    /* transform: scaleX(1); */
   }
 
-  @keyframes slide-bar {
-    0% {
-      transform: translateX(-100%);
-    }
-    50% {
-        transform: translateX(100%);
-    }
-    100% {
-      transform: translateX(-100%);
-    }
+  .name:hover {
+      /* text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5); */
+      /* background: linear-gradient(to left, #ff3366, #33ccff); */
+      background-clip: text;
+      /* display: inline-block; */
+
+
   }
 
-  @keyframes shift-gradient {
-    0% {
-      background-position: left center;
-    }
-    50% {
-      background-position: right center;
-    }
-    100% {
-      background-position: left center;
-    }
+  .name::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -2px; /* Distance below text */
+      /* width: 0%;  */
+      height: 2px; /* Line thickness */
+      /* background: linear-gradient(to right, #ff7e5f, #feb47b); */
+      background: linear-gradient(to left, #ff3366, #33ccff);
+      transition: all 0.7s ease-out; 
+      margin-bottom: 5px;
+      filter: blur(0.5px);
+      /* transform: scaleX(0); */
+      transform-origin: center;
+      width: 0%;
+
+      /* animation:2s slide-bar ease infinite, shift-gradient 2s linear infinite; */
+
   }
-
-
-.quote {
-    /* font-size: x-large; */
-    font-size: clamp(1rem, 3vw, 2rem);
-    /* --animate-delay: 0.5s; */
-}
-
-
-
-.social-icons {
-    margin: 5px;
-}
-
-.social-icons a {
-    font-size: 3em;
-    opacity: 0.8;
-    transition: all 0.3s ease-in-out;
-}
-
-
-.social-icons a:hover {
-    /* color: #ff3366; */
-    opacity: 1;
-
-    /* color: rgba(255, 51, 102, 0.4); */
-    /* font-size: 3em; */
-}
-
-.about {
-    font-size: large;
-    /* margin: ; */
-
-}
-
-.description {
-    font-size: large;
-    color: #f8f8f8;
-}
-
-.top-section {
-    /* margin-top: 200px; */
-    /* padding-top: 200px; */
-    min-height: 100vh;
-    align-content: center;
-    /* margin-bottom: 400px; */
-    /* padding-bottom: 400px; */
-
-}
-
-.content-section {
-    margin-top: 50px;
-    padding-top: 50px;
-    /* margin-bottom: 300px; */
-    /* padding-bottom: 300px; */
-    min-height: 80vh;
-    margin-bottom: 20vh;
     
+    .name:hover::after {
+      width: 100%;
+      /* transform: scaleX(1); */
+    }
+
+    @keyframes slide-bar {
+      0% {
+        transform: translateX(-100%);
+      }
+      50% {
+          transform: translateX(100%);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+
+    @keyframes shift-gradient {
+      0% {
+        background-position: left center;
+      }
+      50% {
+        background-position: right center;
+      }
+      100% {
+        background-position: left center;
+      }
+    }
+
+
+  .quote {
+      /* font-size: x-large; */
+      font-size: clamp(1rem, 3vw, 2rem);
+      /* --animate-delay: 0.5s; */
+  }
+
+
+
+  .social-icons {
+      margin: 5px;
+  }
+
+  .social-icons a {
+      font-size: 3em;
+      opacity: 0.8;
+      transition: all 0.3s ease-in-out;
+  }
+
+ .resume-icon {
     position: relative;
-    border-width: 3px;
+}
+
+.resume-label {
+    position: absolute;
+
+    bottom: -0.2rem;
+    right: -0.4rem;
+
+    font-size: 0.28em;
+    font-weight: 700;
+    line-height: 1;
+
+    padding: 0.15em 0.25em;
+
+    border-radius: 3px;
+
+    background: transparent;
+    color: white;
 }
 
 
+  .social-icons a:hover {
+      /* color: #ff3366; */
+      opacity: 1;
 
-@keyframes animatedgradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
-}
+      /* color: rgba(255, 51, 102, 0.4); */
+      /* font-size: 3em; */
+  }
+
+  .about {
+      font-size: large;
+      /* margin: ; */
+
+  }
+
+  .description {
+      font-size: large;
+      color: #f8f8f8;
+  }
+
+  .top-section {
+      /* margin-top: 200px; */
+      /* padding-top: 200px; */
+      min-height: 100vh;
+      align-content: center;
+      /* margin-bottom: 400px; */
+      /* padding-bottom: 400px; */
+
+  }
+
+  .content-section {
+      margin-top: 50px;
+      padding-top: 50px;
+      /* margin-bottom: 300px; */
+      /* padding-bottom: 300px; */
+      min-height: 80vh;
+      margin-bottom: 20vh;
+      
+      position: relative;
+      border-width: 3px;
+  }
 
 
 
-.profile-pic {
-    height: 50px;
-    width: 50px;
-    border-radius: 100%;
-    object-fit: cover;
-}
+  @keyframes animatedgradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+
+
+  .profile-pic {
+      height: 50px;
+      width: 50px;
+      border-radius: 100%;
+      object-fit: cover;
+  }
