@@ -4,6 +4,9 @@ navbar:
 
   - title: About
     url: '#about'
+  
+  - title: Experience
+    url: '#experience'
 
   - title: Classes
     url: '#classes'
@@ -22,23 +25,44 @@ navbar:
 
 me:
   name: Maksim Sviridov
-  quote: Blazingly Fast 🔥 and Bleeding Edge 🩸 Javascript Framework Enjoyer
-  showDesc: False
-  desc: 
-  # desc: |
-  #   Roses are red 
-
-  #   violets are blue
-
-  #   I test in production
-
-  #   you should too
-  img: 
+  about: >
+    I'm a software engineer interested in building systems
+    at the intersection of robotics, simulation, and machine learning.
+  ascii_file: assets/ascii/pic.txt
   linkedin: https://www.linkedin.com/in/maksim-sviridov-921321263/
   github: https://github.com/sviridovm
-  about: Hi! My name is Maksim, and I am a recent computer science graduate at the University of Michigan. I will be beginning my masters in CSE at Michigan in the fall. 
-          This site showcases my projects, ideas, and insights across a range of interests, from distributed systems and simulations to dynamic web apps and algorithmic designs. 
-  ascii_file: assets/ascii/pic.txt
+  details:
+    - label: Education
+      value: |
+            M.S.E Computer Science · University of Michigan 
+
+            B.S.E Computer Science · University of Michigan
+
+    - label: Focus
+      value: Robotics · Systems · Computer Vision
+
+    - label: Languages
+      value: C++ · Python · Go
+
+# me:
+#   name: Maksim Sviridov
+# #  quote: Blazingly Fast 🔥 and Bleeding Edge 🩸 Javascript Framework Enjoyer
+#   quote:
+#   showDesc: False
+#   desc: 
+#   # desc: |
+#   #   Roses are red 
+
+#   #   violets are blue
+
+#   #   I test in production
+
+#   #   you should too
+#   img: 
+#   linkedin: https://www.linkedin.com/in/maksim-sviridov-921321263/
+#   github: https://github.com/sviridovm
+#   about: Hi! My name is Maksim, and I am a recent graduate from the University of Michigan where I completed my BSE and MSE in Computer Science. 
+#   ascii_file: assets/ascii/pic.txt
 
 text_animation:
   type_speed: 10  
@@ -49,51 +73,68 @@ text_animation:
   # cursorChar: 
 
 projects:
-  - title: C++ Thread Library
-    url: 
-    desc: Implemented a virtual C++ Thread Library that includes mutexes, cvs, and support for multicore processors
-    tags:
-      - name: 
+  # - title: C++ Thread Library
+  #   url: 
+  #   desc: Implemented a virtual C++ Thread Library that includes mutexes, cvs, and support for multicore processors
+  #   tags:
+  #     - name: 
 
-  - title: Personal Portfolio Website
-    url: https://github.com/sviridovm/sviridovm.github.io
-    desc: Personal portfolio website built with Jekyll, JQuery, Bulma CSS, and various other libraries. Deployed on Github Pages
-    tags:
-      - name: Click for Code!
-        type: success
+  # - title: Personal Portfolio Website
+  #   url: https://github.com/sviridovm/sviridovm.github.io
+  #   desc: Personal portfolio website built with Jekyll, JQuery, Bulma CSS, and various other libraries. Deployed on Github Pages
+  #   tags:
+  #     - name: Click for Code!
+  #       type: success
 
-  - title: MaksDB
-    url: https://github.com/sviridovm/MaksDB
-    desc: An In-Memory Sharded Vector DB implemented with the FAISS library. Written in Python 
-    highlight: OLD
 
   - title: C++ Search Engine
-    url: https://github.com/SearchEngineDesign/SearchEngine
+    url: https://github.com/sviridovm/SearchEngine
     desc: Search engine built from scrath in C++ only depending on OpenSSL. Used a distributed crawler/indexer architecture to index over 50 million web pages on GCP. Includes propietary web crawler, HTML parser, inverted index, query compiler, constraint solver, and a ML ranker.
     highlight: 
 
-  - title: Labor Market Economy Simulator
-    url: https://github.com/sviridovm/LaborMarketSimulation
-    desc: Labor market simulation built in python using Agent Based Modeling. Includes a StreamLit UI for elementary data visualization
-    demo: https://labormarketsim.streamlit.app/
-    tags:
-      - name: Work in Progress!
-        type: warning
+  # - title: Labor Market Economy Simulator
+  #   url: https://github.com/sviridovm/LaborMarketSimulation
+  #   desc: Labor market simulation built in python using Agent Based Modeling. Includes a StreamLit UI for elementary data visualization
+  #   demo: https://labormarketsim.streamlit.app/
+  #   tags:
+  #     - name: Work in Progress!
+  #       type: warning
 
-      - name: Click for Code!
-        type: success
+  #     - name: Click for Code!
+  #       type: success
   
-  - title: Medication Tracking Mobile Application
-    url: https://github.com/sviridovm/doserra
-    desc: React Native Mobile Application with an emphasis on accessible design features. Developed using ReactNative, Expo, and SQLite.
-    tags:
-      - name: Work in Progress!
-        type: warning
+  # - title: Medication Tracking Mobile Application
+  #   url: https://github.com/sviridovm/doserra
+  #   desc: React Native Mobile Application with an emphasis on accessible design features. Developed using ReactNative, Expo, and SQLite.
+  #   tags:
+  #     - name: Work in Progress!
+  #       type: warning
       
-      - name: Click for Code!
-        type: success
+  #     - name: Click for Code!
+  #       type: success
       
     
+experience:
+  - title: Robotics Software Engineer Intern
+    company: Dassault Systems Delmia
+    start: June 2026
+    end: Present
+    bullets:
+    - Developed a GPU-accelerated LiDAR simulation framework in C++/CUDA using Nvidia cuBQL, achieving a 113× speedup over an optimized CPU baseline (tinyBVH) across scenes up to 2M triangles at 512K rays/query
+    - Built an autonomous weld-seam trajectory correction pipeline that identifies parts via OCR, locates and extracts the weld seam using edge detection on RGB-D scans, then fuses the measured seam with the nominal digital-twin trajectory to generate a corrected path accounting for real-world part and fixturing error
+    - Created a Python inference server for SAM-6D pose estimation, with a CAD registration API auto-generating reference views via BlenderProc and a backend supporting multiple segmentation and pose estimation models
+    - Bridged a standalone C++ application to ROS2 over FastDDS middleware by generating interface definitions and their C++ codegen structs to publish/subscribe to ROS2 topics from outside the ROS2 process space
+
+  
+  - title: Software Engineer Intern
+    company: Dassault Systems Delmia
+    start: May 2025
+    end: August 2025
+    bullets:
+    - Built a synthetic data generation pipeline in Python to programmatically augment large teleoperation datasets with configurable texture, lighting, material, and trajectory transformations to improve dataset robustness
+    - Developed infrastructure to benchmark Vision-Language-Action (VLA) models for industrial manipulation tasks across latency, accuracy, and deployment constraints
+    - Designed real-time perception pipelines in ROS2 for industrial object detection, pose estimation, and motion planning and validated them in Mujoco simulation
+
 
 classes:
   - name: Quantum Computing
@@ -108,23 +149,26 @@ classes:
   - name: Machine Learning
   - name: Computer Organization
   - name: Search Engine Design
-  
+  - name: Programmable Data Planes
+  - name: Computer Vision
+  - name: Randomized Algorithms
+  - name: Databases
+
 
 
 skills: 
-  - name: Python
-  - name: C++
-  - name: Javascript/Typescript
-  - name: Golang
-  - name: ReactNative
-  - name: React
+  - name: ROS2
+  - name: Linux
+  - name: Bash
+  - name: CUDA
+  - name: OpenCV
+  - name: GCP
+  - name: OpenAI Gym
   - name: Docker
+  - name: CMake
   - name: Git
+  - name: PyTorch
   - name: Dafny
-  - name: Node.js
-  - name: Flask
-  - name: FastAPI
-  # - name: Ros2
 
 
 

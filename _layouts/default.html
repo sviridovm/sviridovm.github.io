@@ -27,10 +27,12 @@
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
 
+    {% include animate_on_scroll.html %}
+
     <!-- navbar -->
     {% include navbar.html %}
     
-    <!-- dots -->
+    <!-- navigation dots -->
     {% include dots.html %}
 
     <!-- Header -->
@@ -39,7 +41,10 @@
 
     {% include about.html %}
 
+    {% include experience.html collection=site.data.home.experience %}
+
     {% include class-list.html %}
+     <!-- {% include courses.html %} -->
 
 
     <!-- Cards -->

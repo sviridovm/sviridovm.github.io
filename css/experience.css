@@ -1,0 +1,73 @@
+.experience-list {
+    margin-top: 2rem;
+}
+
+.experience-item {
+    position: relative;
+    padding: 2rem 2rem 2rem 2.5rem;
+    margin-bottom: 1.5rem;
+
+    border-left: 3px solid #dbdbdb;
+    border-radius: 0 10px 10px 0;
+
+    background: rgba(255, 255, 255, 0.03);
+    transition: border-color 0.2s ease,
+                transform 0.2s ease;
+}
+
+.experience-item:hover {
+    border-left-color: #485fc7;
+    transform: translateX(4px);
+}
+
+.experience-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+    margin-bottom: 1rem;
+}
+
+.experience-company {
+    font-size: 1.05rem;
+    font-weight: 500;
+    margin: 0;
+}
+
+.experience-date {
+    white-space: nowrap;
+    font-size: 0.9rem;
+    opacity: 0.65;
+    padding-top: 0.25rem;
+}
+
+.date-separator {
+    margin: 0 0.3rem;
+}
+
+.experience-description {
+    margin-top: 1rem;
+}
+
+.experience-description ul {
+    margin-top: 0.5rem;
+}
+
+.experience-description li {
+    margin-bottom: 0.7rem;
+}
+
+@media screen and (max-width: 768px) {
+    .experience-header {
+        flex-direction: column;
+        gap: 0.25rem;
+    }
+
+    .experience-date {
+        padding-top: 0;
+    }
+
+    .experience-item {
+        padding: 1.5rem;
+    }
+}

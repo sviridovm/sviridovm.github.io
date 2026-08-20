@@ -1,0 +1,44 @@
+<section class="container content-section" id="experience">
+    <h1 class="name animate__animated animate__fadeInRight animate__faster">
+        Experience
+    </h1>
+
+    <div class="experience-list">
+
+        {% for job in include.collection %}
+
+        <article class="experience-item animate-on-scroll">
+
+            <div class="experience-header">
+                <div>
+                    <h2 class="title is-4 mb-1">
+                        {{ job.title }}
+                    </h2>
+
+                    <p class="experience-company">
+                        {{ job.company }}
+                    </p>
+                </div>
+
+                <div class="experience-date">
+                    <span>{{ job.start }}</span>
+                    <span class="date-separator">—</span>
+                    <span>{{ job.end }}</span>
+                </div>
+            </div>
+
+            <div class="content experience-description">
+                <ul>
+                    {% for bullet in job.bullets %}
+                    <li>{{ bullet }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+        </article>
+
+        {% endfor %}
+
+    </div>
+
+</section>

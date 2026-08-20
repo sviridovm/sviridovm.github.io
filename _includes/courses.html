@@ -1,0 +1,25 @@
+{% assign classes = site.data.home.classes %}
+
+<section class="container content-section" id="classes">
+
+    <h1 class="name animate__animated animate__fadeInRight animate__faster">
+        Classes
+    </h1>
+
+    <div class="course-grid">
+
+        {% for class in classes %}
+
+        <div class="course-item animate-on-scroll">
+            <span class="course-name">
+                {{ class.name }}
+            </span>
+        </div>
+
+        {% endfor %}
+
+    </div>
+
+    <canvas id="class-canvas" class="content animate-on-scroll"></canvas>
+
+</section>

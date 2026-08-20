@@ -1,0 +1,13 @@
+.navbar-item {
+    border-radius: 16px;
+}
+
+.navbar-item:hover {
+    background-color: #444;
+}
+
+.navbar {
+    background-color: transparent;
+    border-width: 0;
+    box-shadow: none;
+}

@@ -46,7 +46,7 @@
 </script>
 
 
-<section class="container content-section" id="about">
+<!-- <section class="container content-section" id="about">
     <h1 class="name animate__animated animate__fadeInRight animate_faster">About Me</h1>
     
     <div class="container">
@@ -67,7 +67,76 @@
 
     </div>
         
+</section> -->
+
+<!-- 
+<section class="container content-section" id="about">
+
+    <h1 class="name animate__animated animate__fadeInRight animate__faster">
+        About Me
+    </h1>
+
+    <div class="about-layout">
+
+        <div class="about-ascii animate-on-scroll">
+            <pre class="about-pre"></pre>
+        </div>
+
+        <div class="about-main animate-on-scroll">
+
+            <p class="about-intro">
+                {{ me.about }}
+            </p>
+
+            
+
+        </div>
+
+    </div>
+
+</section> -->
+
+
+<section class="container content-section" id="about">
+
+    <h1 class="name animate__animated animate__fadeInRight animate__faster">
+        About Me
+    </h1>
+
+    <div class="columns is-vcentered">
+
+        <div class="column is-5">
+            <div class="about-img animate-on-scroll">
+                <pre class="about-pre"></pre>
+            </div>
+        </div>
+
+        <div class="column is-7">
+
+            <div class="about-text animate-on-scroll">
+
+                <p class="description">
+                    {{ me.about }}
+                </p>
+
+                <div class="about-details">
+
+                {% for detail in me.details %}
+
+                <div class="about-detail">
+                    <span class="about-label">{{ detail.label }}</span>
+                    <span class="about-value">{{ detail.value | newline_to_br }}</span>
+                </div>
+
+                {% endfor %}
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
 </section>
-
-
 
