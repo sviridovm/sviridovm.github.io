@@ -88,10 +88,71 @@ projects:
   #       type: success
 
 
-  - title: C++ Search Engine
-    url: https://github.com/sviridovm/SearchEngine
-    desc: Search engine built from scrath in C++ only depending on OpenSSL. Used a distributed crawler/indexer architecture to index over 50 million web pages on GCP. Includes propietary web crawler, HTML parser, inverted index, query compiler, constraint solver, and a ML ranker.
-    highlight: 
+  - title: Distributed Search Engine
+    featured: True
+    github: https://github.com/sviridovm/SearchEngine
+    desc: >
+      Search engine built from scrath in C++ only depending on OpenSSL. 
+      Employed a distributed crawler/indexer architecture to index over 50 million web pages on GCP. 
+      Includes a custom web crawler, HTML parser, inverted index, query compiler, constraint solver, and ML-based page ranker.
+    tech:
+      - C++ 20
+      - OpenSSL
+      - Google Cloud Platform
+      - gRPC
+
+  - title: Smart Basketball with Embedded Microcontroller
+    github: https://github.com/sviridovm/Smart-Basketball
+    desc: > 
+      Built a basketball shooting form analysis system combining OpenCV-based ball tracking, 
+      local VLM inference with Ollama, and Arduino Nano 33 BLE sensor telemetry for multimodal 
+      shot evaluation. Shot motions were detected from webcam video and motion and trajectory heuristics 
+      from microcontroller sensor readings. Key frames were selected and then downscaled for on device analysis using Gemma4:e2b
+    tech:
+      - Python
+      - Arduino
+      - OpenCV
+      - Ollama
+      - Sensor Fusion
+
+  - title: Temporal File Pruning for Vector Search over Time Partitioned Parquet Files
+    pdf: assets/files/Temporal_File_Pruning_for_Vector_Search_over_Time_Partitioned_Parquet_Files.pdf
+    desc: >
+      Extended PQ-Vector, an Apache DataFusion vector search extension with temporal file pruning using timestamp metadata and predicate pushdown, skipping 
+      irrelevant files before IVF index traversal and vector comparisons. Evaluated 24 configurations on SIFT1M across 
+       varying partition counts and query selectivities, achieving up to 8.3× speedup for narrow time-window queries with 
+       exact recall and negligible pruning overhead.
+    tech:
+      - Rust
+      - Apache DataFusion
+      - Apache Parquet
+      - Vector Search
+
+  - title: Content Aware SDN for CDN Video Streaming
+    desc: >
+      Designed a programmable data-plane network for CDN video delivery using P4 and P4Runtime, 
+      implementing a custom packet protocol that exposes video and chunk identifiers for in-switch routing. 
+      Built a controller that dynamically programs videoID/chunkID -> CDN forwarding rules, enabling content-aware 
+      load balancing across multiple CDN nodes without an application-layer proxy. Emulated the complete network with 
+      **Mininet and Stratum BMv2**, including origin servers, CDN caches, clients, and P4 switches.
+    github: https://github.com/sviridovm/Content-Aware-SDN-for-CDN-Video-Streaming
+    tech:
+      - Software Defined Networking
+      - P4
+      - Mininet
+    
+  - title: Sharded Paxos-Based Replicated KV Store
+    desc: >
+      Implemented a sharded, strongly consistent key-value store using Multi-Paxos-based replicated state machines. 
+      Replicated client operations across nodes through deterministic state-machine execution, exposed gRPC APIs for 
+      client and inter-node communication, and tested fault tolerance under simulated network partitions, node crashes, and recovery.
+    tech: 
+    - golang
+    - gRPC
+    - Distributed Systems
+
+
+
 
   # - title: Labor Market Economy Simulator
   #   url: https://github.com/sviridovm/LaborMarketSimulation
