@@ -134,7 +134,7 @@ projects:
       implementing a custom packet protocol that exposes video and chunk identifiers for in-switch routing. 
       Built a controller that dynamically programs videoID/chunkID -> CDN forwarding rules, enabling content-aware 
       load balancing across multiple CDN nodes without an application-layer proxy. Emulated the complete network with 
-      **Mininet and Stratum BMv2**, including origin servers, CDN caches, clients, and P4 switches.
+      Mininet and Stratum BMv2, including origin servers, CDN caches, clients, and P4 switches.
     github: https://github.com/sviridovm/Content-Aware-SDN-for-CDN-Video-Streaming
     tech:
       - Software Defined Networking
