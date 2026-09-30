@@ -1,0 +1,67 @@
+.submit-button {
+    border-radius: 90%;
+    /* border: 1px solid #ddd; */
+    width: 70px;
+    height: 70px;
+    place-items: center;
+    background: rgb(54, 52, 52);
+    /* border: 5px solid ; */
+    position: relative;
+
+    border: 3px solid #2b8ffb;
+
+    transition: all ease 0.2s;
+
+    display: grid;
+    place-items: center;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin: auto;
+}
+
+
+/* .submit-button::before {
+    border-radius: 90%;
+
+    width: 80px;
+    height: 80px;
+
+    animation: rotate 2s linear infinite;
+    background : conic-gradient(in hsl, #2b8ffb, #0251a7, #2b8ffb);
+
+    z-index: -1;
+
+
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    transition: all 0.5s;
+} */
+
+
+
+/* .submit-button::after {
+    content: '';
+    position: absolute;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 47%;
+    animation: rotate 2s linear infinite;
+    background : conic-gradient(in hsl, #2b8ffb, #0251a7, #2b8ffb);
+    
+    z-index: -1;
+} */
+
+/* background : conic-gradient(in hsl, #ff3366, #33ccff, #ff3366); */
+
+.submit-button:hover {
+    /* border: 3px solid conic-gradient(in hsl, #2b8ffb, #0251a7, #2b8ffb); */
+    width: 80px;
+    height: 80px;
+    /* animation: rotate 2s linear infinite; */
+
+}

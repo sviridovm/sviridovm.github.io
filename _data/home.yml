@@ -20,8 +20,8 @@ navbar:
   - title: Contact Me
     url: '#contact' 
 
-  - title: Google it
-    url: "googleit/"
+  # - title: Google it
+    # url: "/googleit/"
 
 me:
   name: Maksim Sviridov

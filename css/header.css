@@ -1,5 +1,7 @@
   .name {
-      background: linear-gradient(to right, #ff3366, #33ccff);
+      /* background: linear-gradient(to right, #ff3366, #33ccff); */
+      background : linear-gradient(to right, #2b8ffb, #b8cade);
+
       background-clip: text;
       /* color: transparent; */
       font-size: max(3rem, 7vw);
@@ -31,7 +33,9 @@
       /* width: 0%;  */
       height: 2px; /* Line thickness */
       /* background: linear-gradient(to right, #ff7e5f, #feb47b); */
-      background: linear-gradient(to left, #ff3366, #33ccff);
+      /* background: linear-gradient(to left, #ff3366, #33ccff); */
+      background : linear-gradient(in hsl, #2b8ffb, #b8cade, #2b8ffb);
+      
       transition: all 0.7s ease-out; 
       margin-bottom: 5px;
       filter: blur(0.5px);
