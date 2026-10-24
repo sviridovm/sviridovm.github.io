@@ -151,6 +151,14 @@ projects:
     - gRPC
     - Distributed Systems
 
+  - title: Real-Time OrderBook Terminal App
+    desc: >
+      Built a live terminal application that streams Coinbase market data, maintaining a real-time order book and trade history and computing live analytics (VWAP, order flow imbalance) across multiple markets
+      Engineered fault-tolerant, concurrent data pipelines using BEAM supervisor trees with message-sequence validation, deduplication, and automatic recovery, so dropped connections resync without losing state or crashing the UI
+    github: https://github.com/sviridovm/elixir-trading-terminal
+    tech:
+    - Elixir
+  
 
 
 

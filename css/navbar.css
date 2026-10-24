@@ -1,5 +1,6 @@
 .navbar-item {
     border-radius: 16px;
+    color: #ddd;
 }
 
 .navbar-item:hover {

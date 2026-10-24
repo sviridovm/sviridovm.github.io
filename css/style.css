@@ -232,4 +232,9 @@ body::-webkit-scrollbar, body::-webkit-scrollbar-button
     width: 100vh;
 }
 
+.content {
+    color: #fff;
+    /* color: #00f; */
+}
+
 
